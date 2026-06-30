@@ -124,8 +124,8 @@
               <span class="why">Lean client, no framework weight.</span>
             </td>
             <td data-label="Back end">
-              <span class="val">Python Cloudflare Worker (no framework)</span>
-              <span class="why">Framework-free to stay under the 3&nbsp;MiB Worker bundle limit.</span>
+              <span class="val">Python Cloudflare Worker</span>
+              <span class="why">Hand-rolled routing — no framework — for a lean, fast-cold-start edge bundle.</span>
             </td>
             <td data-label="APIs / Auth">
               <span class="val">REST + WebSockets · Google OAuth</span>
@@ -150,7 +150,7 @@
             <th scope="row" class="proj" data-label="Project">
               <span class="proj-name">Schoolwise</span>
               <span class="proj-sum">find UK schools strong over many years</span>
-              <a class="link src" href="https://github.com/pauldcarter/schoolperformance" target="_blank" rel="noopener">View source ↗</a>
+              <span class="link tag">In development</span>
             </th>
             <td data-label="Front end">
               <span class="val">Next.js (App Router) + TS + Tailwind</span>
@@ -207,7 +207,40 @@
             </td>
             <td data-label="Uniqueness">
               <span class="val">One stock pool, three channels</span>
-              <span class="why">Web/till/kiosk share stock, each tuned to its risk; reserve-at-basket, R2 media, Stripe SCA.</span>
+              <span class="why">Web/till/kiosk share stock, each tuned to its risk; reserve-at-basket, R2 media, SumUp payments.</span>
+            </td>
+          </tr>
+
+          <!-- Golf Coach -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Project">
+              <span class="proj-name">Golf Coach</span>
+              <span class="proj-sum">knowledge-base editor driving a logic/AI coach</span>
+              <span class="link tag">In development</span>
+            </th>
+            <td data-label="Front end">
+              <span class="val">Vanilla JS · SVG/canvas mind-map</span>
+              <span class="why">Hand-built drag/connect/auto-layout graph editor, zero front-end dependencies.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Zero-dependency Node server</span>
+              <span class="why">Plain Node <code>http</code> — no Express; serves the editor and the knowledge API.</span>
+            </td>
+            <td data-label="APIs / Auth">
+              <span class="val">Internal save/export API</span>
+              <span class="why">Reads/writes the knowledge base; AI recommends only from the curated library.</span>
+            </td>
+            <td data-label="Hosting">
+              <span class="val">Local / self-host</span>
+              <span class="why">In development — runs on Node anywhere; not yet publicly deployed.</span>
+            </td>
+            <td data-label="Database">
+              <span class="val">JSON file store</span>
+              <span class="why">Atomic write-and-rename to <code>knowledge-base.json</code>; right-sized for a curated graph.</span>
+            </td>
+            <td data-label="Uniqueness">
+              <span class="val">GUI-managed knowledge driving the coach</span>
+              <span class="why">An admin graph of foundations → symptoms → resources powers a logic/AI coach that diagnoses technique and prescribes only approved fixes.</span>
             </td>
           </tr>
 

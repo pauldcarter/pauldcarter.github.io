@@ -215,6 +215,13 @@ main {
   font-size: 0.82rem;
   color: var(--muted);
 }
+.why code {
+  font-size: 0.92em;
+  padding: 0.05em 0.35em;
+  border-radius: 5px;
+  background: var(--panel-2);
+  color: #cdd7e8;
+}
 
 /* project (row header) cell */
 .proj { min-width: 190px; }
@@ -243,7 +250,14 @@ main {
 }
 .link.live { color: var(--accent); }
 .link.src  { color: var(--accent-2); }
-.link:hover { background: var(--panel-2); border-color: currentColor; }
+.link:not(.tag):hover { background: var(--panel-2); border-color: currentColor; }
+
+/* non-clickable status tag (e.g. "In development") */
+.link.tag {
+  color: var(--muted);
+  cursor: default;
+  border-style: dashed;
+}
 
 /* ===================== FOOTER ===================== */
 footer {
