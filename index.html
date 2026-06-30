@@ -100,7 +100,7 @@
             </td>
             <td data-label="Hosting">
               <span class="val">Cloudflare Workers</span>
-              <span class="why">Free tier, global edge, single deploy.</span>
+              <span class="why">Global edge network, single deploy.</span>
             </td>
             <td data-label="Database">
               <span class="val">D1 (SQLite at the edge)</span>
@@ -125,7 +125,7 @@
             </td>
             <td data-label="Back end">
               <span class="val">Python Cloudflare Worker (no framework)</span>
-              <span class="why">Framework-free to stay under the 3&nbsp;MiB free-tier bundle limit.</span>
+              <span class="why">Framework-free to stay under the 3&nbsp;MiB Worker bundle limit.</span>
             </td>
             <td data-label="APIs / Auth">
               <span class="val">REST + WebSockets · Google OAuth</span>
@@ -133,7 +133,7 @@
             </td>
             <td data-label="Hosting">
               <span class="val">Cloudflare Workers</span>
-              <span class="why">Free tier, edge, instant deploys.</span>
+              <span class="why">Edge runtime, instant deploys.</span>
             </td>
             <td data-label="Database">
               <span class="val">KV + Durable Objects</span>
@@ -166,7 +166,7 @@
             </td>
             <td data-label="Hosting">
               <span class="val">Vercel + Supabase</span>
-              <span class="why">Free tiers; one thing to deploy, nothing to operate.</span>
+              <span class="why">One thing to deploy, nothing to operate.</span>
             </td>
             <td data-label="Database">
               <span class="val">Postgres + PostGIS</span>
@@ -199,7 +199,7 @@
             </td>
             <td data-label="Hosting">
               <span class="val">GCP e2-micro</span>
-              <span class="why">Always-free tier; full control of the box.</span>
+              <span class="why">Full control of the box.</span>
             </td>
             <td data-label="Database">
               <span class="val">SQLite</span>
@@ -265,7 +265,7 @@
             </td>
             <td data-label="Hosting">
               <span class="val">GitHub Pages</span>
-              <span class="why">Free, static, deploys on push.</span>
+              <span class="why">Static, deploys on push.</span>
             </td>
             <td data-label="Database">
               <span class="val">None</span>
@@ -314,7 +314,7 @@
               <span class="why">Portfolios, docs, client-side games — anything with no server.</span>
             </td>
             <td data-label="Pros">
-              <span class="val">Free, simple, deploy on push</span>
+              <span class="val">Simple, deploy on push</span>
               <span class="why">Lives next to the repo; HTTPS and custom domains included.</span>
             </td>
             <td data-label="Cons">
@@ -343,7 +343,7 @@
             </td>
             <td data-label="Pros">
               <span class="val">Global edge, fast cold start</span>
-              <span class="why">Generous free tier; storage primitives all in one platform.</span>
+              <span class="why">Storage primitives (D1, KV, Durable Objects) all in one platform.</span>
             </td>
             <td data-label="Cons">
               <span class="val">Worker runtime, not Node</span>
@@ -351,7 +351,7 @@
             </td>
             <td data-label="Limits">
               <span class="val">CPU ms &amp; bundle size caps</span>
-              <span class="why">~3 MiB bundle on free; per-request CPU time limited.</span>
+              <span class="why">~3 MiB bundle cap; per-request CPU time limited.</span>
             </td>
             <td data-label="Free tier">
               <span class="val">100k req/day free</span>
@@ -374,12 +374,12 @@
               <span class="why">Git-driven, instant previews, edge/serverless functions built in.</span>
             </td>
             <td data-label="Cons">
-              <span class="val">Opinionated &amp; can get pricey</span>
-              <span class="why">Costs scale with usage; heavy lock-in to its build model.</span>
+              <span class="val">Opinionated &amp; usage-metered</span>
+              <span class="why">Scales with usage; heavy lock-in to its build model.</span>
             </td>
             <td data-label="Limits">
               <span class="val">Function timeout &amp; bandwidth caps</span>
-              <span class="why">Serverless execution time limited; commercial use needs a paid plan.</span>
+              <span class="why">Serverless execution time and bandwidth are capped.</span>
             </td>
             <td data-label="Free tier">
               <span class="val">Hobby tier free</span>
@@ -406,8 +406,8 @@
               <span class="why">Complex queries lean on RPC; row caps mean pagination; some lock-in.</span>
             </td>
             <td data-label="Limits">
-              <span class="val">Free project pauses when idle</span>
-              <span class="why">PostgREST caps responses at 1000 rows; free tier has storage/egress caps.</span>
+              <span class="val">PostgREST row cap</span>
+              <span class="why">Responses capped at 1000 rows — paginate with a unique sort tiebreaker.</span>
             </td>
             <td data-label="Free tier">
               <span class="val">2 projects free</span>
@@ -418,7 +418,7 @@
           <!-- GCP e2-micro -->
           <tr class="project">
             <th scope="row" class="proj" data-label="Platform">
-              <span class="proj-name">GCP (e2-micro VM)</span>
+              <span class="proj-name">GCP</span>
               <span class="proj-sum">a server you fully control</span>
             </th>
             <td data-label="Best for">
@@ -426,7 +426,7 @@
               <span class="why">Django/Gunicorn, background jobs, anything needing a real box.</span>
             </td>
             <td data-label="Pros">
-              <span class="val">Full control, always-free VM</span>
+              <span class="val">Full control of a real VM</span>
               <span class="why">Any stack, persistent disk, no platform constraints.</span>
             </td>
             <td data-label="Cons">
