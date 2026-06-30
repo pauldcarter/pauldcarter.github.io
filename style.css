@@ -116,7 +116,7 @@ body {
 
 /* ===================== MAIN ===================== */
 main {
-  max-width: 1100px;
+  max-width: 1240px;   /* a touch wider to give the 7-column table room */
   margin: 0 auto;
   padding: 1rem 1.5rem 3rem;
 }

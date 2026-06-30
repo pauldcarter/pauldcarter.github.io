@@ -71,6 +71,7 @@
             <th scope="col">Project</th>
             <th scope="col">Front end</th>
             <th scope="col">Back end</th>
+            <th scope="col">APIs / Auth</th>
             <th scope="col">Hosting</th>
             <th scope="col">Database</th>
             <th scope="col">Uniqueness</th>
@@ -92,6 +93,10 @@
             <td data-label="Back end">
               <span class="val">Python Cloudflare Worker</span>
               <span class="why">Edge compute, no server to operate.</span>
+            </td>
+            <td data-label="APIs / Auth">
+              <span class="val">Own REST API + share links</span>
+              <span class="why">Bookmarklet imports parkrun data; read-only views shared via signed links.</span>
             </td>
             <td data-label="Hosting">
               <span class="val">Cloudflare Workers</span>
@@ -122,6 +127,10 @@
               <span class="val">Python Cloudflare Worker (no framework)</span>
               <span class="why">Framework-free to stay under the 3&nbsp;MiB free-tier bundle limit.</span>
             </td>
+            <td data-label="APIs / Auth">
+              <span class="val">REST + WebSockets · Google OAuth</span>
+              <span class="why">Real-time play over Durable Objects; sign-in with CSRF-protected OAuth + session cookies.</span>
+            </td>
             <td data-label="Hosting">
               <span class="val">Cloudflare Workers</span>
               <span class="why">Free tier, edge, instant deploys.</span>
@@ -150,6 +159,10 @@
             <td data-label="Back end">
               <span class="val">Supabase Edge Functions + Python pipeline</span>
               <span class="why">Auto REST over the data; Python ingest stays portable.</span>
+            </td>
+            <td data-label="APIs / Auth">
+              <span class="val">Auto REST (PostgREST) · MapLibre/Mapbox · postcodes.io</span>
+              <span class="why">Generated API off Postgres; interactive maps with postcode geocoding; open data, no user auth.</span>
             </td>
             <td data-label="Hosting">
               <span class="val">Vercel + Supabase</span>
@@ -180,6 +193,10 @@
               <span class="val">Django 6 / Python 3.13</span>
               <span class="why">Batteries-included for auth, admin and payments.</span>
             </td>
+            <td data-label="APIs / Auth">
+              <span class="val">SumUp payments · postcodes.io · Google OAuth</span>
+              <span class="why">Card payments + reader via SumUp; UK address lookup; sign-in via django-allauth (email + Google).</span>
+            </td>
             <td data-label="Hosting">
               <span class="val">GCP e2-micro</span>
               <span class="why">Always-free tier; full control of the box.</span>
@@ -209,6 +226,10 @@
               <span class="val">None — client-side</span>
               <span class="why">All logic in the browser; nothing to run server-side.</span>
             </td>
+            <td data-label="APIs / Auth">
+              <span class="val">None</span>
+              <span class="why">Single-user on-device app; no API or sign-in needed.</span>
+            </td>
             <td data-label="Hosting">
               <span class="val">Vercel</span>
               <span class="why">Zero-config SPA hosting with instant deploys.</span>
@@ -237,6 +258,10 @@
             <td data-label="Back end">
               <span class="val">None — fully static</span>
               <span class="why">No server needed; just files.</span>
+            </td>
+            <td data-label="APIs / Auth">
+              <span class="val">None</span>
+              <span class="why">Everything runs in the browser; no API or login.</span>
             </td>
             <td data-label="Hosting">
               <span class="val">GitHub Pages</span>
