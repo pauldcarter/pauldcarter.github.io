@@ -27,3 +27,23 @@ live deployment (or source where not yet deployed).
 
 Pages builds from the `main` branch root. Commit and push to `main`; the site
 rebuilds automatically.
+
+First-time enable:
+
+```sh
+gh api -X POST repos/pauldcarter/pauldcarter.github.io/pages -f source.branch=main -f source.path=/
+```
+
+## Take it offline
+
+The site is an on/off switch — disabling Pages stops serving it within seconds,
+and the repo and its history stay intact:
+
+```sh
+gh api -X DELETE repos/pauldcarter/pauldcarter.github.io/pages   # go dark
+```
+
+Re-enable any time with the POST command above. (Pages is all-or-nothing per
+site — you can't hide a single project row. Taking this hub down does not affect
+the linked apps; they're hosted separately.)
+
