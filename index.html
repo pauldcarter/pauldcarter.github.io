@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paul Carter — Software Developer</title>
+  <meta name="description" content="Full-stack developer. A portfolio of shipped projects with the stack choices and the reasoning behind them.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HERO ================= -->
+  <!-- Replace the INTRO placeholder below with your own introduction. -->
+  <header class="hero">
+    <p class="eyebrow">Paul Carter</p>
+    <h1>I design, build &amp; ship full-stack web apps.</h1>
+
+    <!-- INTRO PLACEHOLDER — write a paragraph or two about yourself and the
+         services you offer. Delete this comment when you're done. -->
+    <p class="intro">
+      <em>Intro coming soon.</em> Each project below shows the stack I chose and,
+      just as importantly, <strong>why</strong> — front end, back end, hosting and
+      data, plus what makes it different. Available for freelance and contract work.
+    </p>
+
+    <p class="cta">
+      <a class="contact" href="mailto:paulcarter1@gmail.com">Get in touch ↗</a>
+    </p>
+  </header>
+
+  <main>
+
+    <!-- ================= SKILLS STRIP ================= -->
+    <section class="skills" aria-label="Technologies">
+      <span class="chip">React</span>
+      <span class="chip">Next.js</span>
+      <span class="chip">Vite</span>
+      <span class="chip">TypeScript</span>
+      <span class="chip">Tailwind</span>
+      <span class="chip">Python</span>
+      <span class="chip">Django</span>
+      <span class="chip">Cloudflare Workers</span>
+      <span class="chip">Durable Objects</span>
+      <span class="chip">D1 / SQLite</span>
+      <span class="chip">Supabase</span>
+      <span class="chip">Postgres + PostGIS</span>
+      <span class="chip">Vercel</span>
+      <span class="chip">GCP</span>
+      <span class="chip">PWA</span>
+    </section>
+
+    <!-- ================= PROJECT MATRIX ================= -->
+    <!--
+      ONE <tr class="project"> PER PROJECT. To add a project, copy a whole
+      <tr> block and edit it. In each data cell:
+        - the .val line is the headline value (bold),
+        - the .why line is the muted reasoning beneath it.
+      The data-label attributes drive the mobile (stacked) layout — keep them.
+    -->
+    <section class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Front end</th>
+            <th scope="col">Back end</th>
+            <th scope="col">Hosting</th>
+            <th scope="col">Database</th>
+            <th scope="col">Uniqueness</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- RunTracker -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Project">
+              <span class="proj-name">RunTracker</span>
+              <span class="proj-sum">parkrun progress visualised over time</span>
+              <a class="link live" href="https://runtracker.vibegames.workers.dev/" target="_blank" rel="noopener">Visit live ↗</a>
+            </th>
+            <td data-label="Front end">
+              <span class="val">React + Vite + Tailwind + Recharts</span>
+              <span class="why">Rich, interactive charts and a fast SPA build.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Python Cloudflare Worker</span>
+              <span class="why">Edge compute, no server to operate.</span>
+            </td>
+            <td data-label="Hosting">
+              <span class="val">Cloudflare Workers</span>
+              <span class="why">Free tier, global edge, single deploy.</span>
+            </td>
+            <td data-label="Database">
+              <span class="val">D1 (SQLite at the edge)</span>
+              <span class="why">Colocated with the Worker — no separate DB host.</span>
+            </td>
+            <td data-label="Uniqueness">
+              <span class="val">Bookmarklet import &amp; shareable views</span>
+              <span class="why">Pulls in parkrun results; glassmorphism charts; read-only sharing.</span>
+            </td>
+          </tr>
+
+          <!-- Arcade -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Project">
+              <span class="proj-name">Arcade</span>
+              <span class="proj-sum">multiplayer Perudo &amp; a mental-maths game</span>
+              <a class="link live" href="https://arcade.vibegames.workers.dev/" target="_blank" rel="noopener">Visit live ↗</a>
+            </th>
+            <td data-label="Front end">
+              <span class="val">Vanilla JS SPA shell + router</span>
+              <span class="why">Lean client, no framework weight.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Python Cloudflare Worker (no framework)</span>
+              <span class="why">Framework-free to stay under the 3&nbsp;MiB free-tier bundle limit.</span>
+            </td>
+            <td data-label="Hosting">
+              <span class="val">Cloudflare Workers</span>
+              <span class="why">Free tier, edge, instant deploys.</span>
+            </td>
+            <td data-label="Database">
+              <span class="val">KV + Durable Objects</span>
+              <span class="why">DO holds live multiplayer state; KV for persistence — no Postgres needed.</span>
+            </td>
+            <td data-label="Uniqueness">
+              <span class="val">Real-time multiplayer Perudo</span>
+              <span class="why">Live game state coordinated through Durable Objects.</span>
+            </td>
+          </tr>
+
+          <!-- Schoolwise -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Project">
+              <span class="proj-name">Schoolwise</span>
+              <span class="proj-sum">find UK schools strong over many years</span>
+              <a class="link src" href="https://github.com/pauldcarter/schoolperformance" target="_blank" rel="noopener">View source ↗</a>
+            </th>
+            <td data-label="Front end">
+              <span class="val">Next.js (App Router) + TS + Tailwind</span>
+              <span class="why">SSR + typed components for a data-heavy UI.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Supabase Edge Functions + Python pipeline</span>
+              <span class="why">Auto REST over the data; Python ingest stays portable.</span>
+            </td>
+            <td data-label="Hosting">
+              <span class="val">Vercel + Supabase</span>
+              <span class="why">Free tiers; one thing to deploy, nothing to operate.</span>
+            </td>
+            <td data-label="Database">
+              <span class="val">Postgres + PostGIS</span>
+              <span class="why">Geo queries and auto-generated REST out of the box.</span>
+            </td>
+            <td data-label="Uniqueness">
+              <span class="val">Multi-year trajectories, not leaderboards</span>
+              <span class="why">Shows consistency over time; byte-for-byte raw audit layer in the DB.</span>
+            </td>
+          </tr>
+
+          <!-- Slap & Fold -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Project">
+              <span class="proj-name">Slap &amp; Fold</span>
+              <span class="proj-sum">one shop across web, till &amp; kiosk</span>
+              <a class="link live" href="https://slapandfold.com" target="_blank" rel="noopener">Visit live ↗</a>
+            </th>
+            <td data-label="Front end">
+              <span class="val">Django server-rendered templates</span>
+              <span class="why">Simple, robust, SEO-friendly pages.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Django 6 / Python 3.13</span>
+              <span class="why">Batteries-included for auth, admin and payments.</span>
+            </td>
+            <td data-label="Hosting">
+              <span class="val">GCP e2-micro</span>
+              <span class="why">Always-free tier; full control of the box.</span>
+            </td>
+            <td data-label="Database">
+              <span class="val">SQLite</span>
+              <span class="why">Right-sized for the load; zero DB ops.</span>
+            </td>
+            <td data-label="Uniqueness">
+              <span class="val">One stock pool, three channels</span>
+              <span class="why">Web/till/kiosk share stock, each tuned to its risk; reserve-at-basket, R2 media, Stripe SCA.</span>
+            </td>
+          </tr>
+
+          <!-- Family Manager -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Project">
+              <span class="proj-name">Family Manager</span>
+              <span class="proj-sum">organise family life, installable &amp; offline</span>
+              <a class="link live" href="https://familymanager-gold.vercel.app" target="_blank" rel="noopener">Visit live ↗</a>
+            </th>
+            <td data-label="Front end">
+              <span class="val">React 18 + Vite + React Router (PWA)</span>
+              <span class="why">Installable, offline-capable app shell.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">None — client-side</span>
+              <span class="why">All logic in the browser; nothing to run server-side.</span>
+            </td>
+            <td data-label="Hosting">
+              <span class="val">Vercel</span>
+              <span class="why">Zero-config SPA hosting with instant deploys.</span>
+            </td>
+            <td data-label="Database">
+              <span class="val">Client-side (PWA storage)</span>
+              <span class="why">Data stays on-device; works without a network.</span>
+            </td>
+            <td data-label="Uniqueness">
+              <span class="val">Installs like a native app</span>
+              <span class="why">Add-to-home-screen PWA that keeps working offline.</span>
+            </td>
+          </tr>
+
+          <!-- Games -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Project">
+              <span class="proj-name">Games</span>
+              <span class="proj-sum">browser games to play &amp; learn from</span>
+              <a class="link live" href="https://pauldcarter.github.io/games/" target="_blank" rel="noopener">Visit live ↗</a>
+            </th>
+            <td data-label="Front end">
+              <span class="val">Vanilla JavaScript</span>
+              <span class="why">Runs natively in every browser; zero install on a Chromebook.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">None — fully static</span>
+              <span class="why">No server needed; just files.</span>
+            </td>
+            <td data-label="Hosting">
+              <span class="val">GitHub Pages</span>
+              <span class="why">Free, static, deploys on push.</span>
+            </td>
+            <td data-label="Database">
+              <span class="val">None</span>
+              <span class="why">State lives in the browser during play.</span>
+            </td>
+            <td data-label="Uniqueness">
+              <span class="val">Twin JS + Python implementations</span>
+              <span class="why">Each game written in the same shape in both languages, to read side by side and learn.</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built &amp; hosted by Paul Carter · <a href="mailto:paulcarter1@gmail.com">paulcarter1@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
