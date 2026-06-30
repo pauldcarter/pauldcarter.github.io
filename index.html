@@ -10,18 +10,34 @@
 <body>
 
   <!-- ================= HERO ================= -->
-  <!-- Replace the INTRO placeholder below with your own introduction. -->
   <header class="hero">
     <p class="eyebrow">Paul Carter</p>
-    <h1>I design, build &amp; ship full-stack web apps.</h1>
+    <h1>Data specialist &amp; developer — from databases to decisions.</h1>
 
-    <!-- INTRO PLACEHOLDER — write a paragraph or two about yourself and the
-         services you offer. Delete this comment when you're done. -->
     <p class="intro">
-      <em>Intro coming soon.</em> Each project below shows the stack I chose and,
-      just as importantly, <strong>why</strong> — front end, back end, hosting and
-      data, plus what makes it different. Available for freelance and contract work.
+      I'm a data specialist and developer with a computer science degree and a
+      career-long obsession with <strong>data</strong>. I began as a <strong>DBA</strong>,
+      moved into <strong>statistical analysis</strong> with the police, and spent
+      the bulk of my career in <strong>capacity management</strong> — combining
+      strong data-management skills with the communication to turn diverse
+      technology sources into clear, automated, insightful reports. More recently
+      I moved into <strong>data engineering</strong>, building robust pipelines to
+      automate financial reconciliations, and now use <strong>AI to build and test
+      those pipelines</strong>.
     </p>
+    <p class="intro">
+      The projects below are recent personal work, each drawing on the skills that
+      run through my career: <strong>capturing data, processing it robustly,
+      presenting it clearly, and making it genuinely usable.</strong>
+    </p>
+
+    <!-- The four pillars that run through every project. -->
+    <ul class="pillars" aria-label="Core skills">
+      <li><span class="pillar-num">01</span> Capture</li>
+      <li><span class="pillar-num">02</span> Process</li>
+      <li><span class="pillar-num">03</span> Present</li>
+      <li><span class="pillar-num">04</span> Usability</li>
+    </ul>
 
     <p class="cta">
       <a class="contact" href="mailto:paulcarter1@gmail.com">Get in touch ↗</a>
@@ -30,23 +46,14 @@
 
   <main>
 
-    <!-- ================= SKILLS STRIP ================= -->
-    <section class="skills" aria-label="Technologies">
-      <span class="chip">React</span>
-      <span class="chip">Next.js</span>
-      <span class="chip">Vite</span>
-      <span class="chip">TypeScript</span>
-      <span class="chip">Tailwind</span>
-      <span class="chip">Python</span>
-      <span class="chip">Django</span>
-      <span class="chip">Cloudflare Workers</span>
-      <span class="chip">Durable Objects</span>
-      <span class="chip">D1 / SQLite</span>
-      <span class="chip">Supabase</span>
-      <span class="chip">Postgres + PostGIS</span>
-      <span class="chip">Vercel</span>
-      <span class="chip">GCP</span>
-      <span class="chip">PWA</span>
+    <!-- ================= POSITIONING STATEMENT ================= -->
+    <section class="statement" aria-label="What I do">
+      <p>Give me a data problem &mdash; <strong>I'll find the best solution.</strong></p>
+      <p class="statement-sub">
+        With AI I build in whatever stack fits the job, so the tool is never the
+        constraint. The projects below show that range; the tables show the choices
+        and the reasoning.
+      </p>
     </section>
 
     <!-- ================= PROJECT MATRIX ================= -->
@@ -242,6 +249,172 @@
             <td data-label="Uniqueness">
               <span class="val">Twin JS + Python implementations</span>
               <span class="why">Each game written in the same shape in both languages, to read side by side and learn.</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ================= HOSTING TRADE-OFFS ================= -->
+    <h2 class="section-title">Hosting platforms — pros, cons &amp; limits</h2>
+    <p class="section-sub">The hosts I've shipped on, and when I reach for each.</p>
+
+    <!--
+      ONE <tr class="project"> PER PLATFORM. Same value + .why cell pattern as
+      the projects table; keep the data-label attributes for the mobile layout.
+    -->
+    <section class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th scope="col">Platform</th>
+            <th scope="col">Best for</th>
+            <th scope="col">Pros</th>
+            <th scope="col">Cons</th>
+            <th scope="col">Limits</th>
+            <th scope="col">Free tier</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- GitHub Pages -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">GitHub Pages</span>
+              <span class="proj-sum">static sites &amp; SPAs</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Static front ends</span>
+              <span class="why">Portfolios, docs, client-side games — anything with no server.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Free, simple, deploy on push</span>
+              <span class="why">Lives next to the repo; HTTPS and custom domains included.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Static only</span>
+              <span class="why">No server-side code, no env secrets, no database.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">~1 GB site, 100 GB/mo soft</span>
+              <span class="why">Builds throttled; intended for modest traffic.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">Free for public repos</span>
+              <span class="why">No paid tier needed for typical use.</span>
+            </td>
+          </tr>
+
+          <!-- Cloudflare Workers -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">Cloudflare Workers</span>
+              <span class="proj-sum">edge apps &amp; APIs</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Full apps at the edge</span>
+              <span class="why">APIs, SSR, real-time — with D1, KV and Durable Objects alongside.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Global edge, fast cold start</span>
+              <span class="why">Generous free tier; storage primitives all in one platform.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Worker runtime, not Node</span>
+              <span class="why">No full filesystem; some libraries don't run unchanged.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">CPU ms &amp; bundle size caps</span>
+              <span class="why">~3 MiB bundle on free; per-request CPU time limited.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">100k req/day free</span>
+              <span class="why">D1/KV/DO have their own free allowances.</span>
+            </td>
+          </tr>
+
+          <!-- Vercel -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">Vercel</span>
+              <span class="proj-sum">Next.js &amp; front-end apps</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Next.js / SPA hosting</span>
+              <span class="why">Zero-config deploys, preview URLs per branch.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Best-in-class DX</span>
+              <span class="why">Git-driven, instant previews, edge/serverless functions built in.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Opinionated &amp; can get pricey</span>
+              <span class="why">Costs scale with usage; heavy lock-in to its build model.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">Function timeout &amp; bandwidth caps</span>
+              <span class="why">Serverless execution time limited; commercial use needs a paid plan.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">Hobby tier free</span>
+              <span class="why">Non-commercial projects; bandwidth/build minutes capped.</span>
+            </td>
+          </tr>
+
+          <!-- Supabase -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">Supabase</span>
+              <span class="proj-sum">Postgres backend-as-a-service</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Postgres + instant API</span>
+              <span class="why">Auth, auto REST/Realtime and Edge Functions over a real Postgres DB.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Real Postgres, little to operate</span>
+              <span class="why">PostGIS, generated types, RLS and auth out of the box — one thing to deploy.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">REST shaped by PostgREST</span>
+              <span class="why">Complex queries lean on RPC; row caps mean pagination; some lock-in.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">Free project pauses when idle</span>
+              <span class="why">PostgREST caps responses at 1000 rows; free tier has storage/egress caps.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">2 projects free</span>
+              <span class="why">Plenty for small datasets; pauses after inactivity.</span>
+            </td>
+          </tr>
+
+          <!-- GCP e2-micro -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">GCP (e2-micro VM)</span>
+              <span class="proj-sum">a server you fully control</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Long-running stateful apps</span>
+              <span class="why">Django/Gunicorn, background jobs, anything needing a real box.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Full control, always-free VM</span>
+              <span class="why">Any stack, persistent disk, no platform constraints.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">You own the ops</span>
+              <span class="why">Patching, nginx, TLS, backups and scaling are all on you.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">Tiny instance</span>
+              <span class="why">1 shared vCPU + ~1 GB RAM; scales vertically only until you pay.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">1 e2-micro always-free</span>
+              <span class="why">Single region, capped egress; fine for low traffic.</span>
             </td>
           </tr>
 
