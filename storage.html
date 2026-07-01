@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data &amp; storage — Paul Carter</title>
+  <meta name="description" content="The data stores I've worked with — from Google Sheets to MySQL to Supabase Postgres, plus SQLite, D1 at the edge, key-value stores and plain JSON files.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero sub">
+    <a class="backlink" href="index.html">← Paul Carter</a>
+    <h1>Data &amp; storage</h1>
+    <p class="intro">
+      Storage is where I started — my career began as a DBA — and it's still the
+      first decision I get right in any project. The right store ranges from a
+      shared spreadsheet to a geo-enabled Postgres, and picking the smallest one
+      that fits is most of the battle.
+    </p>
+  </header>
+
+  <main>
+    <!--
+      ONE <tr class="project"> PER STORE, roughly in ascending order of
+      operational weight. Each data cell has a .val (headline) and a .why
+      (muted reasoning); keep the data-label attributes for the mobile layout.
+    -->
+    <section class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th scope="col">Store</th>
+            <th scope="col">Best for</th>
+            <th scope="col">Pros</th>
+            <th scope="col">Cons</th>
+            <th scope="col">Where I've used it</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Google Sheets -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Store">
+              <span class="proj-name">Google Sheets</span>
+              <span class="proj-sum">the spreadsheet as a database</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Capture &amp; prototyping</span>
+              <span class="why">Small shared datasets where the users already live in a spreadsheet.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Zero setup, humans can edit</span>
+              <span class="why">Built-in sharing, history and an API — the UI comes for free.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Not a real database</span>
+              <span class="why">No schema or constraints; slow and fragile past a few thousand rows.</span>
+            </td>
+            <td data-label="Where I've used it">
+              <span class="val">Quick tools &amp; early data capture</span>
+              <span class="why">The honest starting point for many data problems — graduate off it when it creaks.</span>
+            </td>
+          </tr>
+
+          <!-- JSON files -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Store">
+              <span class="proj-name">JSON file store</span>
+              <span class="proj-sum">a file on disk, done carefully</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Small curated datasets</span>
+              <span class="why">Config-sized data owned by one process — a database adds nothing.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Diffable, portable, zero ops</span>
+              <span class="why">Readable in any editor, versionable in git, trivially backed up.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">One writer, no queries</span>
+              <span class="why">Concurrency and search are on you; corruption risk without care.</span>
+            </td>
+            <td data-label="Where I've used it">
+              <span class="val">Golf Coach</span>
+              <span class="why">Atomic write-and-rename to <code>knowledge-base.json</code> — safe saves without a DB.</span>
+            </td>
+          </tr>
+
+          <!-- Browser / PWA storage -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Store">
+              <span class="proj-name">Browser storage</span>
+              <span class="proj-sum">localStorage / IndexedDB in a PWA</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Single-user, on-device data</span>
+              <span class="why">Personal apps where the data belongs to the person, not a server.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Private and offline by default</span>
+              <span class="why">Works with no network and no account; nothing to host or secure.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Trapped on the device</span>
+              <span class="why">No cross-device sync; clearing site data deletes everything.</span>
+            </td>
+            <td data-label="Where I've used it">
+              <span class="val">Family Manager</span>
+              <span class="why">An installable PWA whose data never leaves the device.</span>
+            </td>
+          </tr>
+
+          <!-- SQLite -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Store">
+              <span class="proj-name">SQLite</span>
+              <span class="proj-sum">a real SQL database in one file</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Single-server apps</span>
+              <span class="why">Full SQL with transactions, without running a database server.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Zero DB ops, easy backups</span>
+              <span class="why">The database is a file; copy it and you've backed it up.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">One box, limited concurrency</span>
+              <span class="why">Writers serialise; no network access from other machines.</span>
+            </td>
+            <td data-label="Where I've used it">
+              <span class="val">Retail Platform</span>
+              <span class="why">Right-sized for a shop's load — web, till and kiosk on one stock pool.</span>
+            </td>
+          </tr>
+
+          <!-- D1 -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Store">
+              <span class="proj-name">Cloudflare D1</span>
+              <span class="proj-sum">SQLite at the edge</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Workers apps needing SQL</span>
+              <span class="why">Relational data colocated with edge compute — no separate DB host.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Serverless SQL, generous free tier</span>
+              <span class="why">Migrations, backups and bindings built into the Workers platform.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Young, size-capped</span>
+              <span class="why">Per-database size limits; fewer tools than a grown-up Postgres.</span>
+            </td>
+            <td data-label="Where I've used it">
+              <span class="val">RunTracker</span>
+              <span class="why">Run results and share links, queried from the same Worker that serves the app.</span>
+            </td>
+          </tr>
+
+          <!-- KV + Durable Objects -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Store">
+              <span class="proj-name">KV + Durable Objects</span>
+              <span class="proj-sum">edge key-value &amp; live state</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Sessions &amp; real-time state</span>
+              <span class="why">KV for read-heavy persistence; a Durable Object per game/room for live state.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Built for the edge</span>
+              <span class="why">DO gives single-threaded consistency per object — multiplayer without locks.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Not relational</span>
+              <span class="why">No joins or ad-hoc queries; KV is eventually consistent across regions.</span>
+            </td>
+            <td data-label="Where I've used it">
+              <span class="val">Learning Lab</span>
+              <span class="why">Durable Objects hold live multiplayer Perudo games; KV persists the rest.</span>
+            </td>
+          </tr>
+
+          <!-- MySQL -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Store">
+              <span class="proj-name">MySQL</span>
+              <span class="proj-sum">the classic relational workhorse</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Shared relational workloads</span>
+              <span class="why">Multi-user OLTP with a mature replication and tooling story.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Proven at every scale</span>
+              <span class="why">Runs everywhere, hires everywhere; decades of operational knowledge.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">A server to own</span>
+              <span class="why">Provisioning, tuning, backups and upgrades — someone has to be the DBA.</span>
+            </td>
+            <td data-label="Where I've used it">
+              <span class="val">Career database work</span>
+              <span class="why">Where I learned the discipline: schemas, indexing and query plans as a DBA.</span>
+            </td>
+          </tr>
+
+          <!-- Supabase Postgres -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Store">
+              <span class="proj-name">Postgres on Supabase</span>
+              <span class="proj-sum">managed Postgres + PostGIS</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Data products &amp; geo queries</span>
+              <span class="why">The most capable open-source database, with the ops handled for you.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">PostGIS, RLS, instant REST</span>
+              <span class="why">Geo queries out of the box and an API generated straight off the schema.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Platform-shaped access</span>
+              <span class="why">PostgREST row caps mean pagination; free tier pauses when idle.</span>
+            </td>
+            <td data-label="Where I've used it">
+              <span class="val">Schoolwise</span>
+              <span class="why">School locations and multi-year results, with a byte-for-byte raw audit layer.</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built &amp; hosted by Paul Carter · <a href="mailto:paulcarter1@gmail.com">paulcarter1@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

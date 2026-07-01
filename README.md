@@ -5,23 +5,30 @@ GitHub Pages publishes it at the **root** URL:
 
 **https://pauldcarter.github.io/**
 
-It presents my shipped projects as a modern comparison matrix — projects as rows,
-stack categories (front end / back end / hosting / database / uniqueness) as
-columns — with the choice and the *why* in each cell. Each project links to its
-live deployment (or source where not yet deployed).
+The main page is a hub: hero + intro, then a tile per project and three
+"deep-dive" tiles. The detail lives in sub-pages — one page per project
+(features, uniqueness and the stack with the *why* for each choice) and three
+comparison pages for hosting, front/back ends and storage.
 
 ## Files
 
-- `index.html` — the page: hero + intro placeholder + the project table.
-- `style.css` — modern data-grid styling; reflows to stacked cards on mobile.
+- `index.html` — hub: hero + project tiles + deep-dive tiles.
+- `hosting.html` — hosting platforms compared (pros / cons / limits / free tier).
+- `stack.html` — front ends & back ends compared.
+- `storage.html` — data stores compared, from Google Sheets to Supabase.
+- `projects/*.html` — one page per project: intro, uniqueness callout, key
+  features, "How it's built" fact cards.
+- `style.css` — shared styling for all pages; tables and tiles reflow to
+  stacked cards on mobile.
 
 ## Editing
 
-- **Add a project:** copy a whole `<tr class="project"> … </tr>` block in
-  `index.html` and edit the values. Each data cell has a `.val` (headline) and a
-  `.why` (muted reasoning). Keep the `data-label="…"` attributes — they drive the
-  mobile stacked layout.
-- **Write the intro:** replace the `INTRO PLACEHOLDER` block in the hero.
+- **Add a project:** copy a `projects/*.html` page and edit it, then copy a
+  `<a class="tile">` block on `index.html` and point it at the new page. Tiles
+  are single links — nothing inside a tile may be an `<a>`.
+- **Comparison tables:** each row is a `<tr class="project">`; each data cell
+  has a `.val` (headline) and a `.why` (muted reasoning). Keep the
+  `data-label="…"` attributes — they drive the mobile stacked layout.
 
 ## Deploy
 

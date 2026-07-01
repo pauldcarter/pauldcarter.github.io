@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Front ends &amp; back ends — Paul Carter</title>
+  <meta name="description" content="The front-end and back-end stacks I've shipped with — from vanilla JS to React and Next.js, from Django to Python at the edge — and when I reach for each.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero sub">
+    <a class="backlink" href="index.html">← Paul Carter</a>
+    <h1>Front ends &amp; back ends</h1>
+    <p class="intro">
+      There's no single right stack — there's the right stack for the job.
+      Everything below runs in one of my shipped projects; the trade-offs are
+      the ones I actually hit, not the ones in the docs.
+    </p>
+  </header>
+
+  <main>
+
+    <!-- ================= FRONT ENDS ================= -->
+    <h2 class="section-title">Front ends</h2>
+    <p class="section-sub">From zero-dependency vanilla JS to a typed Next.js app — matched to how interactive and data-heavy the UI is.</p>
+
+    <!--
+      ONE <tr class="project"> PER STACK. Each data cell has a .val (headline)
+      and a .why (muted reasoning); keep the data-label attributes — they drive
+      the mobile stacked layout.
+    -->
+    <section class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th scope="col">Stack</th>
+            <th scope="col">Best for</th>
+            <th scope="col">Pros</th>
+            <th scope="col">Cons</th>
+            <th scope="col">Used in</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Vanilla JS -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Stack">
+              <span class="proj-name">Vanilla JavaScript</span>
+              <span class="proj-sum">no framework at all</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Lean, long-lived UIs</span>
+              <span class="why">Games, editors, app shells — anywhere framework weight buys nothing.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Zero dependencies, zero build</span>
+              <span class="why">Nothing to update or break; runs natively in every browser.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">You hand-roll the plumbing</span>
+              <span class="why">Routing, state and components are yours to write and maintain.</span>
+            </td>
+            <td data-label="Used in">
+              <span class="val">Games · Learning Lab · Golf Coach</span>
+              <span class="why">Including a hand-built SVG/canvas mind-map editor with drag, connect and auto-layout.</span>
+            </td>
+          </tr>
+
+          <!-- React + Vite -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Stack">
+              <span class="proj-name">React + Vite</span>
+              <span class="proj-sum">interactive SPAs</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Rich, chart-heavy interfaces</span>
+              <span class="why">Component model pays off once the UI has real state to manage.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Fast builds, huge ecosystem</span>
+              <span class="why">Recharts, Tailwind and PWA tooling drop straight in; instant dev reload.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">A build step and a dependency tree</span>
+              <span class="why">More moving parts to keep current than plain JS.</span>
+            </td>
+            <td data-label="Used in">
+              <span class="val">RunTracker · Family Manager</span>
+              <span class="why">Interactive charts in one; an installable offline PWA in the other.</span>
+            </td>
+          </tr>
+
+          <!-- Next.js -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Stack">
+              <span class="proj-name">Next.js + TypeScript + Tailwind</span>
+              <span class="proj-sum">typed, server-rendered apps</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Data-heavy apps that need SSR</span>
+              <span class="why">Server rendering for fast first paint and SEO; types keep a big data UI honest.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">SSR + typed components</span>
+              <span class="why">App Router, generated DB types end-to-end, utility CSS for speed.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Heaviest stack here</span>
+              <span class="why">Framework churn and build complexity; overkill for simple pages.</span>
+            </td>
+            <td data-label="Used in">
+              <span class="val">Schoolwise</span>
+              <span class="why">Maps, filters and multi-year charts over a large schools dataset.</span>
+            </td>
+          </tr>
+
+          <!-- Django templates -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Stack">
+              <span class="proj-name">Django templates</span>
+              <span class="proj-sum">server-rendered HTML</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Transactional sites</span>
+              <span class="why">Shops, forms, admin — pages that submit and reload beat a SPA here.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Simple, robust, SEO-friendly</span>
+              <span class="why">One codebase for front and back; no API layer to design or version.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Limited client-side interactivity</span>
+              <span class="why">Rich in-page behaviour still needs sprinkled JS on top.</span>
+            </td>
+            <td data-label="Used in">
+              <span class="val">Retail Platform</span>
+              <span class="why">Web shop, till and kiosk all rendered server-side.</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ================= BACK ENDS ================= -->
+    <h2 class="section-title">Back ends</h2>
+    <p class="section-sub">From batteries-included Django to Python at the edge — and knowing when the right back end is none at all.</p>
+
+    <section class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th scope="col">Stack</th>
+            <th scope="col">Best for</th>
+            <th scope="col">Pros</th>
+            <th scope="col">Cons</th>
+            <th scope="col">Used in</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- Django -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Stack">
+              <span class="proj-name">Django / Python</span>
+              <span class="proj-sum">batteries-included framework</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Full business apps</span>
+              <span class="why">Auth, admin, ORM and payments integration without assembling parts.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Everything included and mature</span>
+              <span class="why">django-allauth for sign-in, admin for back office, migrations for the schema.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Needs a real server</span>
+              <span class="why">Long-running process to host, patch and monitor — not serverless.</span>
+            </td>
+            <td data-label="Used in">
+              <span class="val">Retail Platform</span>
+              <span class="why">Django 6 on Python 3.13, on an always-free GCP VM.</span>
+            </td>
+          </tr>
+
+          <!-- Python Cloudflare Workers -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Stack">
+              <span class="proj-name">Python Cloudflare Workers</span>
+              <span class="proj-sum">Python at the edge</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">APIs with nothing to operate</span>
+              <span class="why">Global edge deploys with storage (D1, KV, Durable Objects) alongside.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">No server, instant deploys</span>
+              <span class="why">Hand-rolled routing keeps the bundle lean and cold starts fast.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Worker runtime, not CPython-anywhere</span>
+              <span class="why">No filesystem; not every library runs; CPU time per request is capped.</span>
+            </td>
+            <td data-label="Used in">
+              <span class="val">Learning Lab · RunTracker</span>
+              <span class="why">Including real-time multiplayer over WebSockets and Durable Objects.</span>
+            </td>
+          </tr>
+
+          <!-- Zero-dep Node -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Stack">
+              <span class="proj-name">Zero-dependency Node</span>
+              <span class="proj-sum">plain <code>http</code>, no Express</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Small self-hosted tools</span>
+              <span class="why">When the whole API is a handful of routes, a framework is overhead.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Nothing to install or audit</span>
+              <span class="why">No node_modules, no supply-chain surface, trivially portable.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Everything is manual</span>
+              <span class="why">Routing, parsing and errors are hand-written; doesn't scale to big APIs.</span>
+            </td>
+            <td data-label="Used in">
+              <span class="val">Golf Coach</span>
+              <span class="why">Serves the mind-map editor and the knowledge-base API.</span>
+            </td>
+          </tr>
+
+          <!-- Supabase Edge Functions -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Stack">
+              <span class="proj-name">Supabase Edge Functions + Python pipeline</span>
+              <span class="proj-sum">generated API + portable ingest</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Data products over Postgres</span>
+              <span class="why">PostgREST generates the read API; custom code only where it earns its keep.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Most of the back end is free</span>
+              <span class="why">Auto REST off the schema; the Python ingest pipeline runs anywhere.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Shaped by PostgREST</span>
+              <span class="why">Complex queries lean on RPC functions; some platform lock-in.</span>
+            </td>
+            <td data-label="Used in">
+              <span class="val">Schoolwise</span>
+              <span class="why">Yearly government datasets ingested by Python, served by PostgREST.</span>
+            </td>
+          </tr>
+
+          <!-- None -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Stack">
+              <span class="proj-name">No back end</span>
+              <span class="proj-sum">everything in the browser</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Single-user &amp; static apps</span>
+              <span class="why">If nothing must be shared or secret, the browser is the whole platform.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Nothing to run, ever</span>
+              <span class="why">No server costs, no ops, no downtime; data stays on the user's device.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">No sync, no secrets</span>
+              <span class="why">Cross-device sharing and private keys are off the table by design.</span>
+            </td>
+            <td data-label="Used in">
+              <span class="val">Games · Family Manager</span>
+              <span class="why">Static files on Pages; an offline-first PWA on Vercel.</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built &amp; hosted by Paul Carter · <a href="mailto:paulcarter1@gmail.com">paulcarter1@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

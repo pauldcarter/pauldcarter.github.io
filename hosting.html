@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hosting — Paul Carter</title>
+  <meta name="description" content="The hosting platforms I've shipped on — GitHub Pages, Cloudflare Workers, Vercel, Supabase and GCP — compared by pros, cons, limits and free tiers.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero sub">
+    <a class="backlink" href="index.html">← Paul Carter</a>
+    <h1>Hosting platforms</h1>
+    <p class="intro">
+      The hosts I've shipped on, and when I reach for each. Every platform below
+      runs at least one of my live projects, so the pros and cons come from use,
+      not from marketing pages.
+    </p>
+  </header>
+
+  <main>
+    <!--
+      ONE <tr class="project"> PER PLATFORM. Each data cell has a .val
+      (headline) and a .why (muted reasoning); keep the data-label attributes —
+      they drive the mobile stacked layout.
+    -->
+    <section class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th scope="col">Platform</th>
+            <th scope="col">Best for</th>
+            <th scope="col">Pros</th>
+            <th scope="col">Cons</th>
+            <th scope="col">Limits</th>
+            <th scope="col">Free tier</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <!-- GitHub Pages -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">GitHub Pages</span>
+              <span class="proj-sum">static sites &amp; SPAs</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Static front ends</span>
+              <span class="why">Portfolios, docs, client-side games — anything with no server.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Simple, deploy on push</span>
+              <span class="why">Lives next to the repo; HTTPS and custom domains included.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Static only</span>
+              <span class="why">No server-side code, no env secrets, no database.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">~1 GB site, 100 GB/mo soft</span>
+              <span class="why">Builds throttled; intended for modest traffic.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">Free for public repos</span>
+              <span class="why">No paid tier needed for typical use.</span>
+            </td>
+          </tr>
+
+          <!-- Cloudflare Workers -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">Cloudflare Workers</span>
+              <span class="proj-sum">edge apps &amp; APIs</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Full apps at the edge</span>
+              <span class="why">APIs, SSR, real-time — with D1, KV and Durable Objects alongside.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Global edge, fast cold start</span>
+              <span class="why">Storage primitives (D1, KV, Durable Objects) all in one platform.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Worker runtime, not Node</span>
+              <span class="why">No full filesystem; some libraries don't run unchanged.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">CPU ms &amp; bundle size caps</span>
+              <span class="why">~3 MiB bundle cap; per-request CPU time limited.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">100k req/day free</span>
+              <span class="why">D1/KV/DO have their own free allowances.</span>
+            </td>
+          </tr>
+
+          <!-- Vercel -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">Vercel</span>
+              <span class="proj-sum">Next.js &amp; front-end apps</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Next.js / SPA hosting</span>
+              <span class="why">Zero-config deploys, preview URLs per branch.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Best-in-class DX</span>
+              <span class="why">Git-driven, instant previews, edge/serverless functions built in.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">Opinionated &amp; usage-metered</span>
+              <span class="why">Scales with usage; heavy lock-in to its build model.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">Function timeout &amp; bandwidth caps</span>
+              <span class="why">Serverless execution time and bandwidth are capped.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">Hobby tier free</span>
+              <span class="why">Non-commercial projects; bandwidth/build minutes capped.</span>
+            </td>
+          </tr>
+
+          <!-- Supabase -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">Supabase</span>
+              <span class="proj-sum">Postgres backend-as-a-service</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Postgres + instant API</span>
+              <span class="why">Auth, auto REST/Realtime and Edge Functions over a real Postgres DB.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Real Postgres, little to operate</span>
+              <span class="why">PostGIS, generated types, RLS and auth out of the box — one thing to deploy.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">REST shaped by PostgREST</span>
+              <span class="why">Complex queries lean on RPC; row caps mean pagination; some lock-in.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">PostgREST row cap</span>
+              <span class="why">Responses capped at 1000 rows — paginate with a unique sort tiebreaker.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">2 projects free</span>
+              <span class="why">Plenty for small datasets; pauses after inactivity.</span>
+            </td>
+          </tr>
+
+          <!-- GCP e2-micro -->
+          <tr class="project">
+            <th scope="row" class="proj" data-label="Platform">
+              <span class="proj-name">GCP</span>
+              <span class="proj-sum">a server you fully control</span>
+            </th>
+            <td data-label="Best for">
+              <span class="val">Long-running stateful apps</span>
+              <span class="why">Django/Gunicorn, background jobs, anything needing a real box.</span>
+            </td>
+            <td data-label="Pros">
+              <span class="val">Full control of a real VM</span>
+              <span class="why">Any stack, persistent disk, no platform constraints.</span>
+            </td>
+            <td data-label="Cons">
+              <span class="val">You own the ops</span>
+              <span class="why">Patching, nginx, TLS, backups and scaling are all on you.</span>
+            </td>
+            <td data-label="Limits">
+              <span class="val">Tiny instance</span>
+              <span class="why">1 shared vCPU + ~1 GB RAM; scales vertically only until you pay.</span>
+            </td>
+            <td data-label="Free tier">
+              <span class="val">1 e2-micro always-free</span>
+              <span class="why">Single region, capped egress; fine for low traffic.</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built &amp; hosted by Paul Carter · <a href="mailto:paulcarter1@gmail.com">paulcarter1@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

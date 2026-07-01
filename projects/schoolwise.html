@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Schoolwise — Paul Carter</title>
+  <meta name="description" content="Find UK schools that stay strong over many years — multi-year trajectories on a map, built on Next.js and Supabase Postgres with PostGIS.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="hero sub">
+    <a class="backlink" href="../index.html">← Paul Carter</a>
+    <h1>Schoolwise</h1>
+    <p class="intro">
+      League tables tell you who had a good year. Schoolwise shows which UK
+      schools are strong <em>over many years</em> — trajectories, not
+      leaderboards — searchable by postcode on an interactive map.
+    </p>
+    <p class="cta">
+      <span class="chip dev">In development</span>
+    </p>
+  </header>
+
+  <main>
+
+    <section class="callout" aria-label="What makes it different">
+      <span class="val">Multi-year trajectories, not leaderboards</span>
+      <p>A single-year ranking rewards a lucky cohort. Plotting each school's
+      results across years shows consistency — and a byte-for-byte raw audit
+      layer in the database means every displayed number can be traced back to
+      the exact government file it came from.</p>
+    </section>
+
+    <h2 class="section-title">Key features</h2>
+    <ul class="features">
+      <li>Multi-year performance trajectories per school, instead of single-year league-table snapshots.</li>
+      <li>Interactive map search — enter a postcode, see the schools around it with their long-run record.</li>
+      <li>Byte-for-byte raw audit layer: every published figure is traceable to the original source file.</li>
+      <li>Portable Python ingest pipeline that reprocesses each yearly government data release.</li>
+      <li>Open data with no sign-in — the whole app is readable by anyone.</li>
+    </ul>
+
+    <h2 class="section-title">How it's built</h2>
+    <section class="facts">
+      <div class="fact">
+        <h3>Front end</h3>
+        <span class="val">Next.js (App Router) + TypeScript + Tailwind</span>
+        <span class="why">SSR + typed components for a data-heavy UI.</span>
+      </div>
+      <div class="fact">
+        <h3>Back end</h3>
+        <span class="val">Supabase Edge Functions + Python pipeline</span>
+        <span class="why">Auto REST over the data; the Python ingest stays portable.</span>
+      </div>
+      <div class="fact">
+        <h3>APIs / Auth</h3>
+        <span class="val">PostgREST · MapLibre/Mapbox · postcodes.io</span>
+        <span class="why">Generated API off Postgres; interactive maps with postcode geocoding; no user auth needed.</span>
+      </div>
+      <div class="fact">
+        <h3>Hosting</h3>
+        <span class="val">Vercel + Supabase</span>
+        <span class="why">One thing to deploy, nothing to operate.</span>
+      </div>
+      <div class="fact">
+        <h3>Database</h3>
+        <span class="val">Postgres + PostGIS</span>
+        <span class="why">Geo queries and auto-generated REST out of the box.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built &amp; hosted by Paul Carter · <a href="mailto:paulcarter1@gmail.com">paulcarter1@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

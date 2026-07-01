@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retail Platform — Paul Carter</title>
+  <meta name="description" content="One shop across web, till and kiosk — a single stock pool serving three sales channels, built on Django with SumUp payments.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="hero sub">
+    <a class="backlink" href="../index.html">← Paul Carter</a>
+    <h1>Retail Platform</h1>
+    <p class="intro">
+      A real shop, sold three ways: an online store, a staffed till and a
+      self-serve kiosk — all running on one codebase against one stock pool,
+      with card payments and Google sign-in.
+    </p>
+    <p class="cta">
+      <a class="contact ghost" href="https://slapandfold.com" target="_blank" rel="noopener">Visit live ↗</a>
+    </p>
+  </header>
+
+  <main>
+
+    <section class="callout" aria-label="What makes it different">
+      <span class="val">One stock pool, three channels</span>
+      <p>Web, till and kiosk share the same stock, but each channel is tuned to
+      its own risk: the web reserves stock at the basket, the till trusts the
+      staff member, the kiosk keeps the flow simple. No double-selling, no
+      separate systems to reconcile.</p>
+    </section>
+
+    <h2 class="section-title">Key features</h2>
+    <ul class="features">
+      <li>Three sales channels — web shop, staffed till and self-serve kiosk — on one codebase and one stock pool.</li>
+      <li>Reserve-at-basket stock handling on the web channel, so two customers can't buy the last item.</li>
+      <li>Card payments and reader integration via SumUp, covering online and in-person sales.</li>
+      <li>Sign-in with email or Google via django-allauth; UK address lookup via postcodes.io.</li>
+      <li>Product media served from object storage (R2), keeping the little VM light.</li>
+    </ul>
+
+    <h2 class="section-title">How it's built</h2>
+    <section class="facts">
+      <div class="fact">
+        <h3>Front end</h3>
+        <span class="val">Django server-rendered templates</span>
+        <span class="why">Simple, robust, SEO-friendly pages — a shop doesn't need a SPA.</span>
+      </div>
+      <div class="fact">
+        <h3>Back end</h3>
+        <span class="val">Django 6 / Python 3.13</span>
+        <span class="why">Batteries-included for auth, admin and payments.</span>
+      </div>
+      <div class="fact">
+        <h3>APIs / Auth</h3>
+        <span class="val">SumUp · postcodes.io · Google OAuth</span>
+        <span class="why">Card payments + reader via SumUp; UK address lookup; sign-in via django-allauth.</span>
+      </div>
+      <div class="fact">
+        <h3>Hosting</h3>
+        <span class="val">GCP e2-micro</span>
+        <span class="why">Full control of the box, on the always-free tier.</span>
+      </div>
+      <div class="fact">
+        <h3>Database</h3>
+        <span class="val">SQLite</span>
+        <span class="why">Right-sized for the load; zero database ops.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built &amp; hosted by Paul Carter · <a href="mailto:paulcarter1@gmail.com">paulcarter1@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

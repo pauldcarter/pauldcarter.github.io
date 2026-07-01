@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Paul Carter — Software Developer</title>
-  <meta name="description" content="Full-stack developer. A portfolio of shipped projects with the stack choices and the reasoning behind them.">
+  <title>Paul Carter — Data Specialist</title>
+  <meta name="description" content="Data specialist and developer. A portfolio of shipped projects with the stack choices and the reasoning behind them.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,35 +12,20 @@
   <!-- ================= HERO ================= -->
   <header class="hero">
     <p class="eyebrow">Paul Carter</p>
-    <h1>Data specialist &amp; developer — from databases to decisions.</h1>
+    <h1>Data specialist</h1>
 
     <p class="intro">
-      I'm a data specialist and developer with a computer science degree and a
-      career-long obsession with <strong>data</strong>. I began as a <strong>DBA</strong>,
-      moved into <strong>statistical analysis</strong> with the police, and spent
-      the bulk of my career in <strong>capacity management</strong> — combining
-      strong data-management skills with the communication to turn diverse
-      technology sources into clear, automated, insightful reports. More recently
-      I moved into <strong>data engineering</strong>, building robust pipelines to
-      automate financial reconciliations, and now use <strong>AI to build and test
-      those pipelines</strong>.
+      Capture.
+      Process.
+      Analysis.
+      Visualisation.
+      Informed decisions.
     </p>
+
     <p class="intro">
-      The projects below are recent personal work, each drawing on the skills that
-      run through my career: <strong>capturing data, processing it robustly,
-      presenting it clearly, and making it genuinely usable.</strong>
-    </p>
-
-    <!-- The four pillars that run through every project. -->
-    <ul class="pillars" aria-label="Core skills">
-      <li><span class="pillar-num">01</span> Capture</li>
-      <li><span class="pillar-num">02</span> Process</li>
-      <li><span class="pillar-num">03</span> Present</li>
-      <li><span class="pillar-num">04</span> Usability</li>
-    </ul>
-
-    <p class="cta">
-      <a class="contact" href="mailto:paulcarter1@gmail.com">Get in touch ↗</a>
+      The projects below are my recent personal work, each drawing on skills that
+      run through my career.  AI enables me to build in whatever stack fits the job, so the tool is never
+        the constraint.
     </p>
   </header>
 
@@ -49,435 +34,92 @@
     <!-- ================= POSITIONING STATEMENT ================= -->
     <section class="statement" aria-label="What I do">
       <p>Give me a data problem &mdash; <strong>I'll find the best solution.</strong></p>
-      <p class="statement-sub">
-        With AI I build in whatever stack fits the job, so the tool is never the
-        constraint. The projects below show that range; the tables show the choices
-        and the reasoning.
-      </p>
     </section>
 
-    <!-- ================= PROJECT MATRIX ================= -->
+    <p class="cta">
+      <a class="contact" href="mailto:paulcarter1@gmail.com">Contact me if you have a project you'd like to discuss ↗</a>
+    </p>
+
+    <!-- ================= PROJECT TILES ================= -->
     <!--
-      ONE <tr class="project"> PER PROJECT. To add a project, copy a whole
-      <tr> block and edit it. In each data cell:
-        - the .val line is the headline value (bold),
-        - the .why line is the muted reasoning beneath it.
-      The data-label attributes drive the mobile (stacked) layout — keep them.
+      ONE <a class="tile"> PER PROJECT, linking to its page in projects/.
+      Each tile: name, one-line description, then a footer row with a status
+      chip (Live / In development) and a "Read more" cue. The whole tile is the
+      link, so nothing inside it may be an <a>.
     -->
-    <section class="table-wrap">
-      <table class="matrix">
-        <thead>
-          <tr>
-            <th scope="col">Project</th>
-            <th scope="col">Front end</th>
-            <th scope="col">Back end</th>
-            <th scope="col">APIs / Auth</th>
-            <th scope="col">Hosting</th>
-            <th scope="col">Database</th>
-            <th scope="col">Uniqueness</th>
-          </tr>
-        </thead>
-        <tbody>
+    <h2 class="section-title">Projects</h2>
+    <p class="section-sub">Each page covers what it does, what makes it different, and how it's built.</p>
 
-          <!-- RunTracker -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Project">
-              <span class="proj-name">RunTracker</span>
-              <span class="proj-sum">parkrun progress visualised over time</span>
-              <a class="link live" href="https://runtracker.vibegames.workers.dev/" target="_blank" rel="noopener">Visit live ↗</a>
-            </th>
-            <td data-label="Front end">
-              <span class="val">React + Vite + Tailwind + Recharts</span>
-              <span class="why">Rich, interactive charts and a fast SPA build.</span>
-            </td>
-            <td data-label="Back end">
-              <span class="val">Python Cloudflare Worker</span>
-              <span class="why">Edge compute, no server to operate.</span>
-            </td>
-            <td data-label="APIs / Auth">
-              <span class="val">Own REST API + share links</span>
-              <span class="why">Bookmarklet imports parkrun data; read-only views shared via signed links.</span>
-            </td>
-            <td data-label="Hosting">
-              <span class="val">Cloudflare Workers</span>
-              <span class="why">Global edge network, single deploy.</span>
-            </td>
-            <td data-label="Database">
-              <span class="val">D1 (SQLite at the edge)</span>
-              <span class="why">Colocated with the Worker — no separate DB host.</span>
-            </td>
-            <td data-label="Uniqueness">
-              <span class="val">Bookmarklet import &amp; shareable views</span>
-              <span class="why">Pulls in parkrun results; glassmorphism charts; read-only sharing.</span>
-            </td>
-          </tr>
+    <section class="tile-grid" aria-label="Projects">
 
-          <!-- Learning Lab (formerly "Arcade") -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Project">
-              <span class="proj-name">Learning Lab</span>
-              <span class="proj-sum">kids' learning apps + a turn-based game</span>
-              <a class="link live" href="https://arcade.vibegames.workers.dev/" target="_blank" rel="noopener">Visit live ↗</a>
-            </th>
-            <td data-label="Front end">
-              <span class="val">Vanilla JS SPA shell + router</span>
-              <span class="why">Lean client, no framework weight.</span>
-            </td>
-            <td data-label="Back end">
-              <span class="val">Python Cloudflare Worker</span>
-              <span class="why">Hand-rolled routing — no framework — for a lean, fast-cold-start edge bundle.</span>
-            </td>
-            <td data-label="APIs / Auth">
-              <span class="val">REST + WebSockets · Google OAuth</span>
-              <span class="why">Real-time play over Durable Objects; sign-in with CSRF-protected OAuth + session cookies.</span>
-            </td>
-            <td data-label="Hosting">
-              <span class="val">Cloudflare Workers</span>
-              <span class="why">Edge runtime, instant deploys.</span>
-            </td>
-            <td data-label="Database">
-              <span class="val">KV + Durable Objects</span>
-              <span class="why">DO holds live multiplayer state; KV for persistence — no Postgres needed.</span>
-            </td>
-            <td data-label="Uniqueness">
-              <span class="val">Learning apps + turn-based multiplayer</span>
-              <span class="why">Mental maths, spelling &amp; story-writing for kids, plus a real-time Perudo game on a shared shell.</span>
-            </td>
-          </tr>
+      <a class="tile" href="projects/retail-platform.html">
+        <span class="proj-name">Retail Platform</span>
+        <p class="tile-desc">One shop across web, till &amp; kiosk — a single stock pool serving three sales channels, with card payments and Google sign-in.</p>
+        <span class="tile-foot"><span class="chip live">Live</span><span class="tile-cta">Read more →</span></span>
+      </a>
 
-          <!-- Schoolwise -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Project">
-              <span class="proj-name">Schoolwise</span>
-              <span class="proj-sum">find UK schools strong over many years</span>
-              <span class="link tag">In development</span>
-            </th>
-            <td data-label="Front end">
-              <span class="val">Next.js (App Router) + TS + Tailwind</span>
-              <span class="why">SSR + typed components for a data-heavy UI.</span>
-            </td>
-            <td data-label="Back end">
-              <span class="val">Supabase Edge Functions + Python pipeline</span>
-              <span class="why">Auto REST over the data; Python ingest stays portable.</span>
-            </td>
-            <td data-label="APIs / Auth">
-              <span class="val">Auto REST (PostgREST) · MapLibre/Mapbox · postcodes.io</span>
-              <span class="why">Generated API off Postgres; interactive maps with postcode geocoding; open data, no user auth.</span>
-            </td>
-            <td data-label="Hosting">
-              <span class="val">Vercel + Supabase</span>
-              <span class="why">One thing to deploy, nothing to operate.</span>
-            </td>
-            <td data-label="Database">
-              <span class="val">Postgres + PostGIS</span>
-              <span class="why">Geo queries and auto-generated REST out of the box.</span>
-            </td>
-            <td data-label="Uniqueness">
-              <span class="val">Multi-year trajectories, not leaderboards</span>
-              <span class="why">Shows consistency over time; byte-for-byte raw audit layer in the DB.</span>
-            </td>
-          </tr>
+      <a class="tile" href="projects/schoolwise.html">
+        <span class="proj-name">Schoolwise</span>
+        <p class="tile-desc">Find UK schools that stay strong over many years — multi-year trajectories on a map, not one-year leaderboards.</p>
+        <span class="tile-foot"><span class="chip dev">In development</span><span class="tile-cta">Read more →</span></span>
+      </a>
 
-          <!-- Slap & Fold -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Project">
-              <span class="proj-name">Slap &amp; Fold</span>
-              <span class="proj-sum">one shop across web, till &amp; kiosk</span>
-              <a class="link live" href="https://slapandfold.com" target="_blank" rel="noopener">Visit live ↗</a>
-            </th>
-            <td data-label="Front end">
-              <span class="val">Django server-rendered templates</span>
-              <span class="why">Simple, robust, SEO-friendly pages.</span>
-            </td>
-            <td data-label="Back end">
-              <span class="val">Django 6 / Python 3.13</span>
-              <span class="why">Batteries-included for auth, admin and payments.</span>
-            </td>
-            <td data-label="APIs / Auth">
-              <span class="val">SumUp payments · postcodes.io · Google OAuth</span>
-              <span class="why">Card payments + reader via SumUp; UK address lookup; sign-in via django-allauth (email + Google).</span>
-            </td>
-            <td data-label="Hosting">
-              <span class="val">GCP e2-micro</span>
-              <span class="why">Full control of the box.</span>
-            </td>
-            <td data-label="Database">
-              <span class="val">SQLite</span>
-              <span class="why">Right-sized for the load; zero DB ops.</span>
-            </td>
-            <td data-label="Uniqueness">
-              <span class="val">One stock pool, three channels</span>
-              <span class="why">Web/till/kiosk share stock, each tuned to its risk; reserve-at-basket, R2 media, SumUp payments.</span>
-            </td>
-          </tr>
+      <a class="tile" href="projects/learning-lab.html">
+        <span class="proj-name">Learning Lab</span>
+        <p class="tile-desc">Kids' maths, spelling and story-writing apps plus a real-time multiplayer dice game, on one shared shell at the edge.</p>
+        <span class="tile-foot"><span class="chip live">Live</span><span class="tile-cta">Read more →</span></span>
+      </a>
 
-          <!-- Golf Coach -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Project">
-              <span class="proj-name">Golf Coach</span>
-              <span class="proj-sum">knowledge-base editor driving a logic/AI coach</span>
-              <span class="link tag">In development</span>
-            </th>
-            <td data-label="Front end">
-              <span class="val">Vanilla JS · SVG/canvas mind-map</span>
-              <span class="why">Hand-built drag/connect/auto-layout graph editor, zero front-end dependencies.</span>
-            </td>
-            <td data-label="Back end">
-              <span class="val">Zero-dependency Node server</span>
-              <span class="why">Plain Node <code>http</code> — no Express; serves the editor and the knowledge API.</span>
-            </td>
-            <td data-label="APIs / Auth">
-              <span class="val">Internal save/export API</span>
-              <span class="why">Reads/writes the knowledge base; AI recommends only from the curated library.</span>
-            </td>
-            <td data-label="Hosting">
-              <span class="val">Local / self-host</span>
-              <span class="why">In development — runs on Node anywhere; not yet publicly deployed.</span>
-            </td>
-            <td data-label="Database">
-              <span class="val">JSON file store</span>
-              <span class="why">Atomic write-and-rename to <code>knowledge-base.json</code>; right-sized for a curated graph.</span>
-            </td>
-            <td data-label="Uniqueness">
-              <span class="val">GUI-managed knowledge driving the coach</span>
-              <span class="why">An admin graph of foundations → symptoms → resources powers a logic/AI coach that diagnoses technique and prescribes only approved fixes.</span>
-            </td>
-          </tr>
+      <a class="tile" href="projects/runtracker.html">
+        <span class="proj-name">RunTracker</span>
+        <p class="tile-desc">Parkrun progress visualised over time — one-click bookmarklet import, interactive charts, shareable read-only views.</p>
+        <span class="tile-foot"><span class="chip live">Live</span><span class="tile-cta">Read more →</span></span>
+      </a>
 
-          <!-- Family Manager -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Project">
-              <span class="proj-name">Family Manager</span>
-              <span class="proj-sum">organise family life, installable &amp; offline</span>
-              <a class="link live" href="https://googlefamilymanager.vercel.app/" target="_blank" rel="noopener">Visit live ↗</a>
-            </th>
-            <td data-label="Front end">
-              <span class="val">React 18 + Vite + React Router (PWA)</span>
-              <span class="why">Installable, offline-capable app shell.</span>
-            </td>
-            <td data-label="Back end">
-              <span class="val">None — client-side</span>
-              <span class="why">All logic in the browser; nothing to run server-side.</span>
-            </td>
-            <td data-label="APIs / Auth">
-              <span class="val">None</span>
-              <span class="why">Single-user on-device app; no API or sign-in needed.</span>
-            </td>
-            <td data-label="Hosting">
-              <span class="val">Vercel</span>
-              <span class="why">Zero-config SPA hosting with instant deploys.</span>
-            </td>
-            <td data-label="Database">
-              <span class="val">Client-side (PWA storage)</span>
-              <span class="why">Data stays on-device; works without a network.</span>
-            </td>
-            <td data-label="Uniqueness">
-              <span class="val">Installs like a native app</span>
-              <span class="why">Add-to-home-screen PWA that keeps working offline.</span>
-            </td>
-          </tr>
+      <a class="tile" href="projects/golf-coach.html">
+        <span class="proj-name">Golf Coach</span>
+        <p class="tile-desc">A GUI-managed knowledge base — a visual mind-map of golf technique — driving an AI coach that only prescribes approved fixes.</p>
+        <span class="tile-foot"><span class="chip dev">In development</span><span class="tile-cta">Read more →</span></span>
+      </a>
 
-          <!-- Games -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Project">
-              <span class="proj-name">Games</span>
-              <span class="proj-sum">casual browser games, built to learn how games work</span>
-              <a class="link live" href="https://pauldcarter.github.io/games/" target="_blank" rel="noopener">Visit live ↗</a>
-            </th>
-            <td data-label="Front end">
-              <span class="val">Vanilla JavaScript</span>
-              <span class="why">Runs natively in every browser; zero install on a Chromebook.</span>
-            </td>
-            <td data-label="Back end">
-              <span class="val">None — fully static</span>
-              <span class="why">No server needed; just files.</span>
-            </td>
-            <td data-label="APIs / Auth">
-              <span class="val">None</span>
-              <span class="why">Everything runs in the browser; no API or login.</span>
-            </td>
-            <td data-label="Hosting">
-              <span class="val">GitHub Pages</span>
-              <span class="why">Static, deploys on push.</span>
-            </td>
-            <td data-label="Database">
-              <span class="val">None</span>
-              <span class="why">State lives in the browser during play.</span>
-            </td>
-            <td data-label="Uniqueness">
-              <span class="val">Twin JS + Python implementations</span>
-              <span class="why">Each game written in the same shape in both languages, to read side by side and learn.</span>
-            </td>
-          </tr>
+      <a class="tile" href="projects/family-manager.html">
+        <span class="proj-name">Family Manager</span>
+        <p class="tile-desc">Organise family life in an app that installs to the home screen and keeps working offline — no account, no server.</p>
+        <span class="tile-foot"><span class="chip live">Live</span><span class="tile-cta">Read more →</span></span>
+      </a>
 
-        </tbody>
-      </table>
+      <a class="tile" href="projects/games.html">
+        <span class="proj-name">Games</span>
+        <p class="tile-desc">Casual browser games built to learn how games work — each written twice, in JavaScript and Python, to read side by side.</p>
+        <span class="tile-foot"><span class="chip live">Live</span><span class="tile-cta">Read more →</span></span>
+      </a>
+
     </section>
 
-    <!-- ================= HOSTING TRADE-OFFS ================= -->
-    <h2 class="section-title">Hosting platforms — pros, cons &amp; limits</h2>
-    <p class="section-sub">The hosts I've shipped on, and when I reach for each.</p>
+    <!-- ================= DEEP DIVES ================= -->
+    <h2 class="section-title">How I choose a stack</h2>
+    <p class="section-sub">The platforms and tools I've shipped on, compared honestly — pros, cons and limits.</p>
 
-    <!--
-      ONE <tr class="project"> PER PLATFORM. Same value + .why cell pattern as
-      the projects table; keep the data-label attributes for the mobile layout.
-    -->
-    <section class="table-wrap">
-      <table class="matrix">
-        <thead>
-          <tr>
-            <th scope="col">Platform</th>
-            <th scope="col">Best for</th>
-            <th scope="col">Pros</th>
-            <th scope="col">Cons</th>
-            <th scope="col">Limits</th>
-            <th scope="col">Free tier</th>
-          </tr>
-        </thead>
-        <tbody>
+    <section class="tile-grid" aria-label="Stack deep dives">
 
-          <!-- GitHub Pages -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Platform">
-              <span class="proj-name">GitHub Pages</span>
-              <span class="proj-sum">static sites &amp; SPAs</span>
-            </th>
-            <td data-label="Best for">
-              <span class="val">Static front ends</span>
-              <span class="why">Portfolios, docs, client-side games — anything with no server.</span>
-            </td>
-            <td data-label="Pros">
-              <span class="val">Simple, deploy on push</span>
-              <span class="why">Lives next to the repo; HTTPS and custom domains included.</span>
-            </td>
-            <td data-label="Cons">
-              <span class="val">Static only</span>
-              <span class="why">No server-side code, no env secrets, no database.</span>
-            </td>
-            <td data-label="Limits">
-              <span class="val">~1 GB site, 100 GB/mo soft</span>
-              <span class="why">Builds throttled; intended for modest traffic.</span>
-            </td>
-            <td data-label="Free tier">
-              <span class="val">Free for public repos</span>
-              <span class="why">No paid tier needed for typical use.</span>
-            </td>
-          </tr>
+      <a class="tile topic" href="hosting.html">
+        <span class="proj-name">Hosting</span>
+        <p class="tile-desc">GitHub Pages, Cloudflare Workers, Vercel, Supabase and a raw GCP VM — when I reach for each, and what each one caps.</p>
+        <span class="tile-foot"><span class="tile-cta">Compare platforms →</span></span>
+      </a>
 
-          <!-- Cloudflare Workers -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Platform">
-              <span class="proj-name">Cloudflare Workers</span>
-              <span class="proj-sum">edge apps &amp; APIs</span>
-            </th>
-            <td data-label="Best for">
-              <span class="val">Full apps at the edge</span>
-              <span class="why">APIs, SSR, real-time — with D1, KV and Durable Objects alongside.</span>
-            </td>
-            <td data-label="Pros">
-              <span class="val">Global edge, fast cold start</span>
-              <span class="why">Storage primitives (D1, KV, Durable Objects) all in one platform.</span>
-            </td>
-            <td data-label="Cons">
-              <span class="val">Worker runtime, not Node</span>
-              <span class="why">No full filesystem; some libraries don't run unchanged.</span>
-            </td>
-            <td data-label="Limits">
-              <span class="val">CPU ms &amp; bundle size caps</span>
-              <span class="why">~3 MiB bundle cap; per-request CPU time limited.</span>
-            </td>
-            <td data-label="Free tier">
-              <span class="val">100k req/day free</span>
-              <span class="why">D1/KV/DO have their own free allowances.</span>
-            </td>
-          </tr>
+      <a class="tile topic" href="stack.html">
+        <span class="proj-name">Front ends &amp; back ends</span>
+        <p class="tile-desc">From vanilla JS to React and Next.js; from Django to Python at the edge to a zero-dependency Node server.</p>
+        <span class="tile-foot"><span class="tile-cta">Compare stacks →</span></span>
+      </a>
 
-          <!-- Vercel -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Platform">
-              <span class="proj-name">Vercel</span>
-              <span class="proj-sum">Next.js &amp; front-end apps</span>
-            </th>
-            <td data-label="Best for">
-              <span class="val">Next.js / SPA hosting</span>
-              <span class="why">Zero-config deploys, preview URLs per branch.</span>
-            </td>
-            <td data-label="Pros">
-              <span class="val">Best-in-class DX</span>
-              <span class="why">Git-driven, instant previews, edge/serverless functions built in.</span>
-            </td>
-            <td data-label="Cons">
-              <span class="val">Opinionated &amp; usage-metered</span>
-              <span class="why">Scales with usage; heavy lock-in to its build model.</span>
-            </td>
-            <td data-label="Limits">
-              <span class="val">Function timeout &amp; bandwidth caps</span>
-              <span class="why">Serverless execution time and bandwidth are capped.</span>
-            </td>
-            <td data-label="Free tier">
-              <span class="val">Hobby tier free</span>
-              <span class="why">Non-commercial projects; bandwidth/build minutes capped.</span>
-            </td>
-          </tr>
+      <a class="tile topic" href="storage.html">
+        <span class="proj-name">Data &amp; storage</span>
+        <p class="tile-desc">From Google Sheets to MySQL to Supabase — plus SQLite, D1 at the edge, key-value stores and plain JSON files.</p>
+        <span class="tile-foot"><span class="tile-cta">Compare stores →</span></span>
+      </a>
 
-          <!-- Supabase -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Platform">
-              <span class="proj-name">Supabase</span>
-              <span class="proj-sum">Postgres backend-as-a-service</span>
-            </th>
-            <td data-label="Best for">
-              <span class="val">Postgres + instant API</span>
-              <span class="why">Auth, auto REST/Realtime and Edge Functions over a real Postgres DB.</span>
-            </td>
-            <td data-label="Pros">
-              <span class="val">Real Postgres, little to operate</span>
-              <span class="why">PostGIS, generated types, RLS and auth out of the box — one thing to deploy.</span>
-            </td>
-            <td data-label="Cons">
-              <span class="val">REST shaped by PostgREST</span>
-              <span class="why">Complex queries lean on RPC; row caps mean pagination; some lock-in.</span>
-            </td>
-            <td data-label="Limits">
-              <span class="val">PostgREST row cap</span>
-              <span class="why">Responses capped at 1000 rows — paginate with a unique sort tiebreaker.</span>
-            </td>
-            <td data-label="Free tier">
-              <span class="val">2 projects free</span>
-              <span class="why">Plenty for small datasets; pauses after inactivity.</span>
-            </td>
-          </tr>
-
-          <!-- GCP e2-micro -->
-          <tr class="project">
-            <th scope="row" class="proj" data-label="Platform">
-              <span class="proj-name">GCP</span>
-              <span class="proj-sum">a server you fully control</span>
-            </th>
-            <td data-label="Best for">
-              <span class="val">Long-running stateful apps</span>
-              <span class="why">Django/Gunicorn, background jobs, anything needing a real box.</span>
-            </td>
-            <td data-label="Pros">
-              <span class="val">Full control of a real VM</span>
-              <span class="why">Any stack, persistent disk, no platform constraints.</span>
-            </td>
-            <td data-label="Cons">
-              <span class="val">You own the ops</span>
-              <span class="why">Patching, nginx, TLS, backups and scaling are all on you.</span>
-            </td>
-            <td data-label="Limits">
-              <span class="val">Tiny instance</span>
-              <span class="why">1 shared vCPU + ~1 GB RAM; scales vertically only until you pay.</span>
-            </td>
-            <td data-label="Free tier">
-              <span class="val">1 e2-micro always-free</span>
-              <span class="why">Single region, capped egress; fine for low traffic.</span>
-            </td>
-          </tr>
-
-        </tbody>
-      </table>
     </section>
   </main>
 

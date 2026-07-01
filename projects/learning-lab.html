@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Lab — Paul Carter</title>
+  <meta name="description" content="Kids' maths, spelling and story-writing apps plus a real-time multiplayer Perudo game, on one shared shell running on Cloudflare Workers.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="hero sub">
+    <a class="backlink" href="../index.html">← Paul Carter</a>
+    <h1>Learning Lab</h1>
+    <p class="intro">
+      An EdTech platform for kids: mental maths, spelling and story-writing
+      apps, plus a real-time multiplayer Perudo (liar's dice) game — all on one
+      shared shell, running entirely at the edge.
+    </p>
+    <p class="cta">
+      <a class="contact ghost" href="https://arcade.vibegames.workers.dev/" target="_blank" rel="noopener">Visit live ↗</a>
+    </p>
+  </header>
+
+  <main>
+
+    <section class="callout" aria-label="What makes it different">
+      <span class="val">Learning apps + turn-based multiplayer, one platform</span>
+      <p>Most kids' learning sites are single-player worksheets. Learning Lab
+      pairs practice apps with a genuinely real-time multiplayer game — live
+      state held in Durable Objects over WebSockets — so the same account and
+      shell cover both homework and play.</p>
+    </section>
+
+    <h2 class="section-title">Key features</h2>
+    <ul class="features">
+      <li>Mental maths, spelling and story-writing apps for kids, on a single SPA shell with shared sign-in.</li>
+      <li>Real-time multiplayer Perudo — live games over WebSockets, with each game's state in its own Durable Object.</li>
+      <li>Google sign-in with CSRF-protected OAuth and session cookies.</li>
+      <li>Hand-rolled routing in a Python Cloudflare Worker — no framework — for a lean bundle and fast cold starts.</li>
+      <li>No traditional database: Durable Objects hold live state, KV handles persistence.</li>
+    </ul>
+
+    <h2 class="section-title">How it's built</h2>
+    <section class="facts">
+      <div class="fact">
+        <h3>Front end</h3>
+        <span class="val">Vanilla JS SPA shell + router</span>
+        <span class="why">Lean client, no framework weight.</span>
+      </div>
+      <div class="fact">
+        <h3>Back end</h3>
+        <span class="val">Python Cloudflare Worker</span>
+        <span class="why">Hand-rolled routing for a lean, fast-cold-start edge bundle.</span>
+      </div>
+      <div class="fact">
+        <h3>APIs / Auth</h3>
+        <span class="val">REST + WebSockets · Google OAuth</span>
+        <span class="why">Real-time play over Durable Objects; CSRF-protected sign-in with session cookies.</span>
+      </div>
+      <div class="fact">
+        <h3>Hosting</h3>
+        <span class="val">Cloudflare Workers</span>
+        <span class="why">Edge runtime, instant deploys.</span>
+      </div>
+      <div class="fact">
+        <h3>Database</h3>
+        <span class="val">KV + Durable Objects</span>
+        <span class="why">DO holds live multiplayer state; KV for persistence — no Postgres needed.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built &amp; hosted by Paul Carter · <a href="mailto:paulcarter1@gmail.com">paulcarter1@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>

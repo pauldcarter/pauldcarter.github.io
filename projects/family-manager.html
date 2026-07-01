@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Family Manager — Paul Carter</title>
+  <meta name="description" content="Organise family life in an installable, offline-capable PWA — no account, no server, data stays on the device.">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <header class="hero sub">
+    <a class="backlink" href="../index.html">← Paul Carter</a>
+    <h1>Family Manager</h1>
+    <p class="intro">
+      An app for organising family life that installs to the home screen like a
+      native app and keeps working with no signal — because there's no server,
+      no account and no network dependency at all.
+    </p>
+    <p class="cta">
+      <a class="contact ghost" href="https://googlefamilymanager.vercel.app/" target="_blank" rel="noopener">Visit live ↗</a>
+    </p>
+  </header>
+
+  <main>
+
+    <section class="callout" aria-label="What makes it different">
+      <span class="val">Installs like a native app, works offline</span>
+      <p>The interesting decision here is what was left out. No back end, no
+      database host, no sign-in — the PWA app shell and on-device storage do
+      everything, which means zero running costs, total privacy and an app that
+      works on a plane.</p>
+    </section>
+
+    <h2 class="section-title">Key features</h2>
+    <ul class="features">
+      <li>Add-to-home-screen PWA — installs like a native app on phones and desktops.</li>
+      <li>Fully offline-capable: the app shell and data live on the device.</li>
+      <li>No account and no sign-in — open it and start using it.</li>
+      <li>Complete privacy by architecture: family data never leaves the device.</li>
+      <li>Zero running costs — static hosting is the entire infrastructure.</li>
+    </ul>
+
+    <h2 class="section-title">How it's built</h2>
+    <section class="facts">
+      <div class="fact">
+        <h3>Front end</h3>
+        <span class="val">React 18 + Vite + React Router (PWA)</span>
+        <span class="why">Installable, offline-capable app shell.</span>
+      </div>
+      <div class="fact">
+        <h3>Back end</h3>
+        <span class="val">None — client-side</span>
+        <span class="why">All logic in the browser; nothing to run server-side.</span>
+      </div>
+      <div class="fact">
+        <h3>APIs / Auth</h3>
+        <span class="val">None</span>
+        <span class="why">Single-user on-device app; no API or sign-in needed.</span>
+      </div>
+      <div class="fact">
+        <h3>Hosting</h3>
+        <span class="val">Vercel</span>
+        <span class="why">Zero-config SPA hosting with instant deploys.</span>
+      </div>
+      <div class="fact">
+        <h3>Database</h3>
+        <span class="val">Client-side (PWA storage)</span>
+        <span class="why">Data stays on-device; works without a network.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built &amp; hosted by Paul Carter · <a href="mailto:paulcarter1@gmail.com">paulcarter1@gmail.com</a></p>
+  </footer>
+
+</body>
+</html>
