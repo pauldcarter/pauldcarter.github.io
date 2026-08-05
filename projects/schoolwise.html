@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Schoolwise — Paul Carter</title>
-  <meta name="description" content="Find UK schools that stay strong over many years — multi-year trajectories on a map, built on Next.js and Supabase Postgres with PostGIS.">
+  <meta name="description" content="UK school performance presented as multi-year trajectories rather than single-year league tables, built on Next.js and Supabase Postgres with PostGIS.">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
     <a class="backlink" href="../index.html">← Paul Carter</a>
     <h1>Schoolwise</h1>
     <p class="intro">
-      League tables tell you who had a good year. Schoolwise shows which UK
-      schools are strong <em>over many years</em> — trajectories, not
-      leaderboards — searchable by postcode on an interactive map.
+      Schoolwise presents UK school performance <em>over multiple years</em>
+      rather than as single-year league tables, showing longer-term trajectories
+      and allowing search by postcode on an interactive map.
     </p>
     <p class="cta">
       <a class="contact ghost" href="https://schoolperformance.vercel.app/" target="_blank" rel="noopener">Visit live ↗</a>
@@ -26,19 +26,19 @@
 
     <section class="callout" aria-label="What makes it different">
       <span class="val">Multi-year trajectories, not leaderboards</span>
-      <p>A single-year ranking rewards a lucky cohort. Plotting each school's
-      results across years shows consistency — and a byte-for-byte raw audit
-      layer in the database means every displayed number can be traced back to
-      the exact government file it came from.</p>
+      <p>A single-year ranking can reflect one unrepresentative cohort. Plotting
+      each school's results across several years indicates consistency. A
+      byte-for-byte raw audit layer in the database allows every displayed
+      figure to be traced back to the government file it originated from.</p>
     </section>
 
     <h2 class="section-title">Key features</h2>
     <ul class="features">
       <li>Multi-year performance trajectories per school, instead of single-year league-table snapshots.</li>
-      <li>Interactive map search — enter a postcode, see the schools around it with their long-run record.</li>
+      <li>Interactive map search by postcode, showing nearby schools with their long-term record.</li>
       <li>Byte-for-byte raw audit layer: every published figure is traceable to the original source file.</li>
       <li>Portable Python ingest pipeline that reprocesses each yearly government data release.</li>
-      <li>Open data with no sign-in — the whole app is readable by anyone.</li>
+      <li>Open data with no sign-in required; all content is publicly readable.</li>
     </ul>
 
   </main>

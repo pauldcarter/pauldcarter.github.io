@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Retail Platform — Paul Carter</title>
-  <meta name="description" content="One shop across web, till and kiosk — a single stock pool serving three sales channels, built on Django with SumUp payments.">
+  <meta name="description" content="A single codebase serving three sales channels — web shop, staffed till and self-serve kiosk — from one stock pool, built on Django with SumUp payments.">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
     <a class="backlink" href="../index.html">← Paul Carter</a>
     <h1>Retail Platform</h1>
     <p class="intro">
-      A real shop, sold three ways: an online store, a staffed till and a
-      self-serve kiosk — all running on one codebase against one stock pool,
-      with card payments and Google sign-in.
+      A retail system providing three sales channels — an online store, a
+      staffed till and a self-serve kiosk — running on a single codebase against
+      one stock pool, with card payments and Google sign-in.
     </p>
     <p class="cta">
       <a class="contact ghost" href="https://slapandfold.com" target="_blank" rel="noopener">Visit live ↗</a>
@@ -26,19 +26,20 @@
 
     <section class="callout" aria-label="What makes it different">
       <span class="val">One stock pool, three channels</span>
-      <p>Web, till and kiosk share the same stock, but each channel is tuned to
-      its own risk: the web reserves stock at the basket, the till trusts the
-      staff member, the kiosk keeps the flow simple. No double-selling, no
-      separate systems to reconcile.</p>
+      <p>The web, till and kiosk channels share the same stock, with each
+      channel handling reservation according to its own risk profile: the web
+      channel reserves stock at the basket, the till relies on the staff member,
+      and the kiosk uses a simplified flow. This prevents double-selling and
+      avoids reconciling separate systems.</p>
     </section>
 
     <h2 class="section-title">Key features</h2>
     <ul class="features">
       <li>Three sales channels — web shop, staffed till and self-serve kiosk — on one codebase and one stock pool.</li>
-      <li>Reserve-at-basket stock handling on the web channel, so two customers can't buy the last item.</li>
+      <li>Reserve-at-basket stock handling on the web channel, preventing two customers from purchasing the same remaining item.</li>
       <li>Card payments and reader integration via SumUp, covering online and in-person sales.</li>
       <li>Sign-in with email or Google via django-allauth; UK address lookup via postcodes.io.</li>
-      <li>Product media served from object storage (R2), keeping the little VM light.</li>
+      <li>Product media served from object storage (R2), reducing load on the virtual machine.</li>
     </ul>
 
   </main>

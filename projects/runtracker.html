@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RunTracker — Paul Carter</title>
-  <meta name="description" content="Parkrun progress visualised over time — bookmarklet import, interactive charts and shareable read-only views, on Cloudflare Workers and D1.">
+  <meta name="description" content="Parkrun results visualised over time, with bookmarklet-based import, interactive charts and shareable read-only views, on Cloudflare Workers and D1.">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
     <a class="backlink" href="../index.html">← Paul Carter</a>
     <h1>RunTracker</h1>
     <p class="intro">
-      Parkrun gives you a results table; RunTracker turns it into a story.
-      Import your family's results with one click, then watch progress unfold
-      in interactive charts you can share with anyone.
+      RunTracker presents parkrun results as visualised progress over time.
+      Results are imported in a single step, then displayed in interactive
+      charts that can be shared via read-only links.
     </p>
     <p class="cta">
       <a class="contact ghost" href="https://runtracker.vibegames.workers.dev/" target="_blank" rel="noopener">Visit live ↗</a>
@@ -26,19 +26,19 @@
 
     <section class="callout" aria-label="What makes it different">
       <span class="val">Bookmarklet import &amp; shareable views</span>
-      <p>Parkrun has no public API, so RunTracker uses a bookmarklet: open your
-      results page, click once, and the data flows in. Progress then becomes
-      glassmorphism charts, and a signed link gives grandparents a read-only
-      view — no account needed.</p>
+      <p>Parkrun provides no public API, so RunTracker uses a bookmarklet: the
+      user opens their results page and clicks once to import the data. Progress
+      is then presented as interactive charts, and a signed link provides a
+      read-only view to others without requiring an account.</p>
     </section>
 
     <h2 class="section-title">Key features</h2>
     <ul class="features">
       <li>One-click bookmarklet import straight from a parkrun results page — no manual data entry.</li>
       <li>Interactive charts of times, positions and progress across every event and runner.</li>
-      <li>Read-only sharing via signed links, so family can follow along without signing up.</li>
-      <li>Multi-runner support — track the whole family's parkrun journeys side by side.</li>
-      <li>Everything served from a single Cloudflare Worker with its database alongside.</li>
+      <li>Read-only sharing via signed links, allowing others to view results without registering.</li>
+      <li>Multi-runner support, allowing several runners' results to be tracked alongside one another.</li>
+      <li>Served entirely from a single Cloudflare Worker with a colocated database.</li>
     </ul>
 
   </main>

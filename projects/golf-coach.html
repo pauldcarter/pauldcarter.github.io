@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Golf Coach — Paul Carter</title>
-  <meta name="description" content="A GUI-managed knowledge base — a visual mind-map of golf technique — driving an AI coach that only prescribes approved fixes.">
+  <meta name="description" content="A curated knowledge base of golf technique, edited as a visual mind-map, from which an AI coach recommends only approved fixes.">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -13,9 +13,9 @@
     <a class="backlink" href="../index.html">← Paul Carter</a>
     <h1>Golf Coach</h1>
     <p class="intro">
-      A golf coaching app built the safe way round: a coach curates a visual
-      knowledge base of technique — foundations, symptoms and fixes — and the
-      AI is only allowed to recommend from that approved library.
+      A golf coaching application in which a coach curates a visual knowledge
+      base of technique — foundations, symptoms and fixes — and the AI is
+      restricted to recommending only from that approved library.
     </p>
     <p class="cta">
       <span class="chip dev">In development</span>
@@ -26,19 +26,19 @@
 
     <section class="callout" aria-label="What makes it different">
       <span class="val">GUI-managed knowledge driving the coach</span>
-      <p>Most AI coaches make things up. Here an admin edits a mind-map graph of
-      foundations → symptoms → resources, and the logic/AI coach diagnoses a
-      player's technique and prescribes <em>only</em> fixes from that curated
-      library — the human stays in charge of the advice.</p>
+      <p>An administrator edits a mind-map graph of foundations → symptoms →
+      resources, and the coach diagnoses a player's technique and prescribes
+      <em>only</em> fixes drawn from that curated library. All advice is
+      therefore traceable to an identified coaching source.</p>
     </section>
 
     <h2 class="section-title">Key features</h2>
     <ul class="features">
       <li>Visual mind-map editor for the knowledge base — drag, connect and auto-layout, hand-built in SVG/canvas.</li>
-      <li>A structured graph of foundations → symptoms → resources that encodes real coaching knowledge.</li>
+      <li>A structured graph of foundations → symptoms → resources encoding established coaching knowledge.</li>
       <li>A logic/AI coach that diagnoses technique from symptoms and prescribes only approved fixes.</li>
-      <li>Zero dependencies front to back — vanilla JS in the browser, plain Node <code>http</code> on the server.</li>
-      <li>Atomic write-and-rename saves to a JSON file store — safe persistence without a database.</li>
+      <li>No third-party dependencies: vanilla JavaScript in the browser and plain Node <code>http</code> on the server.</li>
+      <li>Atomic write-and-rename saves to a JSON file store, providing safe persistence without a database.</li>
     </ul>
 
   </main>
