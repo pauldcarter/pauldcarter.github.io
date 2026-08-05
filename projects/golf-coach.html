@@ -41,34 +41,6 @@
       <li>Atomic write-and-rename saves to a JSON file store — safe persistence without a database.</li>
     </ul>
 
-    <h2 class="section-title">How it's built</h2>
-    <section class="facts">
-      <div class="fact">
-        <h3>Front end</h3>
-        <span class="val">Vanilla JS · SVG/canvas mind-map</span>
-        <span class="why">Hand-built drag/connect/auto-layout graph editor, zero front-end dependencies.</span>
-      </div>
-      <div class="fact">
-        <h3>Back end</h3>
-        <span class="val">Zero-dependency Node server</span>
-        <span class="why">Plain Node <code>http</code> — no Express; serves the editor and the knowledge API.</span>
-      </div>
-      <div class="fact">
-        <h3>APIs / Auth</h3>
-        <span class="val">Internal save/export API</span>
-        <span class="why">Reads/writes the knowledge base; AI recommends only from the curated library.</span>
-      </div>
-      <div class="fact">
-        <h3>Hosting</h3>
-        <span class="val">Local / self-host</span>
-        <span class="why">Runs on Node anywhere; not yet publicly deployed.</span>
-      </div>
-      <div class="fact">
-        <h3>Database</h3>
-        <span class="val">JSON file store</span>
-        <span class="why">Atomic write-and-rename to <code>knowledge-base.json</code>; right-sized for a curated graph.</span>
-      </div>
-    </section>
   </main>
 
   <footer>

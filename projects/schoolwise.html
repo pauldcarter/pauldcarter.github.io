@@ -41,34 +41,6 @@
       <li>Open data with no sign-in — the whole app is readable by anyone.</li>
     </ul>
 
-    <h2 class="section-title">How it's built</h2>
-    <section class="facts">
-      <div class="fact">
-        <h3>Front end</h3>
-        <span class="val">Next.js (App Router) + TypeScript + Tailwind</span>
-        <span class="why">SSR + typed components for a data-heavy UI.</span>
-      </div>
-      <div class="fact">
-        <h3>Back end</h3>
-        <span class="val">Supabase Edge Functions + Python pipeline</span>
-        <span class="why">Auto REST over the data; the Python ingest stays portable.</span>
-      </div>
-      <div class="fact">
-        <h3>APIs / Auth</h3>
-        <span class="val">PostgREST · MapLibre/Mapbox · postcodes.io</span>
-        <span class="why">Generated API off Postgres; interactive maps with postcode geocoding; no user auth needed.</span>
-      </div>
-      <div class="fact">
-        <h3>Hosting</h3>
-        <span class="val">Vercel + Supabase</span>
-        <span class="why">One thing to deploy, nothing to operate.</span>
-      </div>
-      <div class="fact">
-        <h3>Database</h3>
-        <span class="val">Postgres + PostGIS</span>
-        <span class="why">Geo queries and auto-generated REST out of the box.</span>
-      </div>
-    </section>
   </main>
 
   <footer>

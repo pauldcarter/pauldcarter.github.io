@@ -41,34 +41,6 @@
       <li>No traditional database: Durable Objects hold live state, KV handles persistence.</li>
     </ul>
 
-    <h2 class="section-title">How it's built</h2>
-    <section class="facts">
-      <div class="fact">
-        <h3>Front end</h3>
-        <span class="val">Vanilla JS SPA shell + router</span>
-        <span class="why">Lean client, no framework weight.</span>
-      </div>
-      <div class="fact">
-        <h3>Back end</h3>
-        <span class="val">Python Cloudflare Worker</span>
-        <span class="why">Hand-rolled routing for a lean, fast-cold-start edge bundle.</span>
-      </div>
-      <div class="fact">
-        <h3>APIs / Auth</h3>
-        <span class="val">REST + WebSockets · Google OAuth</span>
-        <span class="why">Real-time play over Durable Objects; CSRF-protected sign-in with session cookies.</span>
-      </div>
-      <div class="fact">
-        <h3>Hosting</h3>
-        <span class="val">Cloudflare Workers</span>
-        <span class="why">Edge runtime, instant deploys.</span>
-      </div>
-      <div class="fact">
-        <h3>Database</h3>
-        <span class="val">KV + Durable Objects</span>
-        <span class="why">DO holds live multiplayer state; KV for persistence — no Postgres needed.</span>
-      </div>
-    </section>
   </main>
 
   <footer>
