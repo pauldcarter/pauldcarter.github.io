@@ -96,31 +96,163 @@
 
     </section>
 
-    <!-- ================= DEEP DIVES ================= -->
-    <h2 class="section-title">How I choose a stack</h2>
-    <p class="section-sub">The platforms and tools I've shipped on, compared honestly — pros, cons and limits.</p>
+    <!-- ================= STACK MATRIX ================= -->
+    <!--
+      Projects as rows, stack categories as columns. Each cell is a value plus a
+      muted "why". On narrow screens the table reflows to stacked cards, with the
+      column name taken from each cell's data-label.
+    -->
+    <h2 class="section-title">The stack behind each app</h2>
+    <p class="section-sub">Where each one runs, and what it's built with — the tool follows the job, not the other way round.</p>
 
-    <section class="tile-grid" aria-label="Stack deep dives">
+    <div class="table-wrap">
+      <table class="matrix">
+        <thead>
+          <tr>
+            <th scope="col">Project</th>
+            <th scope="col">Hosting</th>
+            <th scope="col">Front end</th>
+            <th scope="col">Back end</th>
+          </tr>
+        </thead>
+        <tbody>
 
-      <a class="tile topic" href="hosting.html">
-        <span class="proj-name">Hosting</span>
-        <p class="tile-desc">GitHub Pages, Cloudflare Workers, Vercel, Supabase and a raw GCP VM — when I reach for each, and what each one caps.</p>
-        <span class="tile-foot"><span class="tile-cta">Compare platforms →</span></span>
-      </a>
+          <tr class="project">
+            <th scope="row" class="proj">
+              <span class="proj-name">Retail Platform</span>
+              <a class="link live" href="projects/retail-platform.html">Read more →</a>
+            </th>
+            <td data-label="Hosting">
+              <span class="val">GCP e2-micro</span>
+              <span class="why">Full control of the box, on the always-free tier.</span>
+            </td>
+            <td data-label="Front end">
+              <span class="val">Django server-rendered templates</span>
+              <span class="why">A shop doesn't need a SPA — simple, robust, SEO-friendly.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Django 6 / Python 3.13</span>
+              <span class="why">Batteries-included for auth, admin and payments.</span>
+            </td>
+          </tr>
 
-      <a class="tile topic" href="stack.html">
-        <span class="proj-name">Front ends &amp; back ends</span>
-        <p class="tile-desc">From vanilla JS to React and Next.js; from Django to Python at the edge to a zero-dependency Node server.</p>
-        <span class="tile-foot"><span class="tile-cta">Compare stacks →</span></span>
-      </a>
+          <tr class="project">
+            <th scope="row" class="proj">
+              <span class="proj-name">Schoolwise</span>
+              <a class="link live" href="projects/schoolwise.html">Read more →</a>
+            </th>
+            <td data-label="Hosting">
+              <span class="val">Vercel + Supabase</span>
+              <span class="why">One thing to deploy, nothing to operate.</span>
+            </td>
+            <td data-label="Front end">
+              <span class="val">Next.js (App Router) + TypeScript + Tailwind</span>
+              <span class="why">SSR + typed components for a data-heavy UI.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Supabase Edge Functions + Python pipeline</span>
+              <span class="why">Auto REST over the data; the Python ingest stays portable.</span>
+            </td>
+          </tr>
 
-      <a class="tile topic" href="storage.html">
-        <span class="proj-name">Data &amp; storage</span>
-        <p class="tile-desc">From Google Sheets to MySQL to Supabase — plus SQLite, D1 at the edge, key-value stores and plain JSON files.</p>
-        <span class="tile-foot"><span class="tile-cta">Compare stores →</span></span>
-      </a>
+          <tr class="project">
+            <th scope="row" class="proj">
+              <span class="proj-name">Learning Lab</span>
+              <a class="link live" href="projects/learning-lab.html">Read more →</a>
+            </th>
+            <td data-label="Hosting">
+              <span class="val">Cloudflare Workers</span>
+              <span class="why">Edge runtime, instant deploys.</span>
+            </td>
+            <td data-label="Front end">
+              <span class="val">Vanilla JS SPA shell + router</span>
+              <span class="why">Lean client, no framework weight.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Python Cloudflare Worker</span>
+              <span class="why">Hand-rolled routing for a lean, fast-cold-start edge bundle.</span>
+            </td>
+          </tr>
 
-    </section>
+          <tr class="project">
+            <th scope="row" class="proj">
+              <span class="proj-name">RunTracker</span>
+              <a class="link live" href="projects/runtracker.html">Read more →</a>
+            </th>
+            <td data-label="Hosting">
+              <span class="val">Cloudflare Workers</span>
+              <span class="why">Global edge network, single deploy.</span>
+            </td>
+            <td data-label="Front end">
+              <span class="val">React + Vite + Tailwind + Recharts</span>
+              <span class="why">Rich, interactive charts and a fast SPA build.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Python Cloudflare Worker</span>
+              <span class="why">Edge compute, no server to operate.</span>
+            </td>
+          </tr>
+
+          <tr class="project">
+            <th scope="row" class="proj">
+              <span class="proj-name">Golf Coach</span>
+              <a class="link live" href="projects/golf-coach.html">Read more →</a>
+            </th>
+            <td data-label="Hosting">
+              <span class="val">Local / self-host</span>
+              <span class="why">Runs on Node anywhere; not yet publicly deployed.</span>
+            </td>
+            <td data-label="Front end">
+              <span class="val">Vanilla JS · SVG/canvas mind-map</span>
+              <span class="why">Hand-built graph editor, zero front-end dependencies.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">Zero-dependency Node server</span>
+              <span class="why">Plain Node <code>http</code> — no Express.</span>
+            </td>
+          </tr>
+
+          <tr class="project">
+            <th scope="row" class="proj">
+              <span class="proj-name">Family Manager</span>
+              <a class="link live" href="projects/family-manager.html">Read more →</a>
+            </th>
+            <td data-label="Hosting">
+              <span class="val">Vercel</span>
+              <span class="why">Zero-config SPA hosting with instant deploys.</span>
+            </td>
+            <td data-label="Front end">
+              <span class="val">React 18 + Vite + React Router (PWA)</span>
+              <span class="why">Installable, offline-capable app shell.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">None — client-side</span>
+              <span class="why">All logic in the browser; nothing to run server-side.</span>
+            </td>
+          </tr>
+
+          <tr class="project">
+            <th scope="row" class="proj">
+              <span class="proj-name">Games</span>
+              <a class="link live" href="projects/games.html">Read more →</a>
+            </th>
+            <td data-label="Hosting">
+              <span class="val">GitHub Pages</span>
+              <span class="why">Static, deploys on push.</span>
+            </td>
+            <td data-label="Front end">
+              <span class="val">Vanilla JavaScript</span>
+              <span class="why">Runs natively in every browser; zero install on a Chromebook.</span>
+            </td>
+            <td data-label="Back end">
+              <span class="val">None — fully static</span>
+              <span class="why">No server needed; just files.</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table>
+    </div>
   </main>
 
   <footer>
