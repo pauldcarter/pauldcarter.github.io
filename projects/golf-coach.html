@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Golf Coach — Paul Carter</title>
-  <meta name="description" content="A curated knowledge base of golf technique, edited as a visual mind-map, from which an AI coach recommends only approved fixes.">
+  <meta name="description" content="A golf coaching app where a coach curates the technique library and the AI recommends only approved fixes.">
   <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -25,21 +25,24 @@
   <main>
 
     <section class="callout" aria-label="What makes it different">
-      <span class="val">GUI-managed knowledge driving the coach</span>
-      <p>An administrator edits a mind-map graph of foundations → symptoms →
-      resources, and the coach diagnoses a player's technique and prescribes
-      <em>only</em> fixes drawn from that curated library. All advice is
-      therefore traceable to an identified coaching source.</p>
+      <span class="val">The coach decides what the AI is allowed to say</span>
+      <p>A coach curates the library of technique — foundations, symptoms and
+      fixes — and the app recommends <em>only</em> from that approved material.
+      Every piece of advice a golfer receives traces back to a coach they can
+      name.</p>
     </section>
 
     <h2 class="section-title">Key features</h2>
     <ul class="features">
-      <li>Visual mind-map editor for the knowledge base — drag, connect and auto-layout, hand-built in SVG/canvas.</li>
-      <li>A structured graph of foundations → symptoms → resources encoding established coaching knowledge.</li>
-      <li>A logic/AI coach that diagnoses technique from symptoms and prescribes only approved fixes.</li>
-      <li>No third-party dependencies: vanilla JavaScript in the browser and plain Node <code>http</code> on the server.</li>
-      <li>Atomic write-and-rename saves to a JSON file store, providing safe persistence without a database.</li>
+      <li>A visual mind-map editor for building and rearranging the coaching library.</li>
+      <li>Diagnoses a golfer's fault from the symptoms they describe.</li>
+      <li>Prescribes only fixes the coach has approved — never invented advice.</li>
+      <li>Accounts for compensations, so it treats the cause rather than the symptom.</li>
+      <li>Separate views for the coach editing the library and the golfer using it.</li>
     </ul>
+
+    <h2 class="section-title">Screenshots</h2>
+    <div class="shots">Screenshots coming soon</div>
 
   </main>
 

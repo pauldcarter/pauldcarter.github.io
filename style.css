@@ -377,6 +377,18 @@ main {
 .callout p { margin: 0.35rem 0 0; color: var(--muted); }
 .callout .val { font-size: 1.05rem; }
 
+/* screenshot placeholder on project pages */
+.shots {
+  margin: 1.25rem 0 0;
+  padding: 2.75rem 1.5rem;
+  border: 1px dashed var(--border);
+  border-radius: 14px;
+  background: var(--bg-soft);
+  color: var(--faint);
+  text-align: center;
+  font-size: 0.95rem;
+}
+
 /* ===================== FOOTER ===================== */
 footer {
   text-align: center;
