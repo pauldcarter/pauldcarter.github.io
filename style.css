@@ -70,7 +70,14 @@ body {
   font-size: 1.05rem;
 }
 
-.cta { margin-top: 1.75rem; text-align: center; }
+.cta {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+}
 
 .contact {
   display: inline-block;
